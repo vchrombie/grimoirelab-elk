@@ -38,7 +38,7 @@ p2o = 'utils.p2o:main'
 gelk_mapping = 'utils.gelk_mapping:main'
 
 [tool.poetry.dependencies]
-python = "3.5 || ^3.6 || ^3.7"
+python = "^3.6"
 elasticsearch = "6.3.1"
 elasticsearch-dsl = "6.3.1"
 requests = "2.21.0"
@@ -51,11 +51,12 @@ sortinghat = {branch = "master", git = "https://github.com/chaoss/grimoirelab-so
 grimoirelab-toolkit = {branch = "master", git = "https://github.com/chaoss/grimoirelab-toolkit"}
 cereslib = {branch = "master", git = "https://github.com/chaoss/grimoirelab-cereslib"}
 graal = {branch = "master", git = "https://github.com/chaoss/grimoirelab-graal"}
-perceval = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval"}
-perceval-mozilla = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval-mozilla"}
-perceval-opnfv = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval-opnfv"}
-perceval-puppet = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval-puppet"}
-perceval-finos = {branch = "master", git = "https://github.com/Bitergia/grimoirelab-perceval-finos"}
+perceval = {branch = "update-deps", git = "https://github.com/vchrombie/grimoirelab-perceval"}
+perceval-mozilla = {branch = "update-deps", git = "https://github.com/vchrombie/grimoirelab-perceval-mozilla"}
+perceval-opnfv = {branch = "update-deps", git = "https://github.com/vchrombie/grimoirelab-perceval-opnfv"}
+perceval-puppet = {branch = "update-deps", git = "https://github.com/vchrombie/grimoirelab-perceval-puppet"}
+perceval-finos = {branch = "update-deps", git = "https://github.com/vchrombie/grimoirelab-perceval-finos"}
+perceval-weblate = {branch = "update-deps", git = "https://github.com/vchrombie/grimoirelab-perceval-weblate"}
 
 [tool.poetry.dev-dependencies]
 httpretty = "^0.9.6"
