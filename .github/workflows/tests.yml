@@ -1,0 +1,71 @@
+name: tests
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '!*.*.*'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+        elasticsearch-version: [6.1.0, 7.2.0]
+
+    services:
+      # How to use MySQL
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    name: Python ${{ matrix.python-version }} for ES ${{ matrix.elasticsearch-version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install and set up Poetry
+        run: |
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+          echo "PATH=$HOME/.poetry/bin:$PATH" >> $GITHUB_ENV
+      - name: Runs Elasticsearch ${{ matrix.elasticsearch-version }}
+        uses: elastic/elastic-github-actions/elasticsearch@master
+        with:
+          stack-version: ${{ matrix.elasticsearch-version }}
+      - name: Install dependencies
+        run: |
+          poetry install -vvv
+          poetry add -D coveralls
+      - name: Verify Elasticsearch connection
+        run: |
+          curl -fsSL "http://localhost:9200/_cat/health?h=status"
+      - name: Setup MySQL Database
+        env:
+          DB_HOST: 127.0.0.1
+          DB_PORT: ${{ job.services.mysql.ports[3306] }}
+        run: |
+          mysql --host $DB_HOST --port $DB_PORT -uroot -proot -e "CREATE DATABASE test_sh"
+          mysql --host $DB_HOST --port $DB_PORT -uroot -proot -e "CREATE DATABASE test_projects"
+          mysql --host $DB_HOST --port $DB_PORT -uroot -proot test_projects < tests/test_projects.sql
+      - name: Lint with flake8
+        run: |
+          poetry run flake8
+      - name: Tests and Coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd tests
+          poetry run coverage run --source=grimoire_elk run_tests.py
+          poetry run coveralls --service=github
