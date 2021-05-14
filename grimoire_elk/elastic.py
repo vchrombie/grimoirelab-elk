@@ -122,7 +122,11 @@ class ElasticSearch(object):
             try:
                 version_str = res.json()['version']['number']
                 version_major = version_str.split('.')[0]
-                return version_major
+                distribution_str = res.json()['version']['distribution']
+                if distribution_str == 'opensearch':
+                    return '7'
+                else:
+                    return version_major
             except Exception:
                 msg = "Could not read proper welcome message from url {}, {}".format(
                     anonymize_url(url),
