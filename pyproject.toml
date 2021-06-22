@@ -38,7 +38,7 @@ p2o = 'utils.p2o:main'
 gelk_mapping = 'utils.gelk_mapping:main'
 
 [tool.poetry.dependencies]
-python = "3.5 || ^3.6 || ^3.7"
+python = "^3.6"
 elasticsearch = "6.3.1"
 elasticsearch-dsl = "6.3.1"
 requests = "2.21.0"
@@ -47,18 +47,23 @@ geopy = "^2.0.0"
 PyMySQL = "0.9.3"
 pandas = ">=0.22.0,<=0.25.3"
 statsmodels = "^0.9.0"
-sortinghat = {branch = "master", git = "https://github.com/chaoss/grimoirelab-sortinghat", optional = true}
-grimoirelab-toolkit = {branch = "master", git = "https://github.com/chaoss/grimoirelab-toolkit"}
-cereslib = {branch = "master", git = "https://github.com/chaoss/grimoirelab-cereslib"}
-graal = {branch = "master", git = "https://github.com/chaoss/grimoirelab-graal"}
-perceval = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval"}
-perceval-mozilla = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval-mozilla"}
-perceval-opnfv = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval-opnfv"}
-perceval-puppet = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval-puppet"}
-perceval-finos = {branch = "master", git = "https://github.com/Bitergia/grimoirelab-perceval-finos"}
+sortinghat = "^0.7.15"
+grimoirelab-toolkit = "^0.2.0"
+cereslib = "^0.1.15"
+graal = "^0.2.9"
+perceval = "^0.17.7"
+perceval-mozilla = "^0.2.12"
+perceval-opnfv = "^0.1.19"
+perceval-puppet = "^0.1.18"
+perceval-finos = "^0.1.9"
+perceval-weblate = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 httpretty = "^0.9.6"
+sortinghat = {git = "https://github.com/chaoss/grimoirelab-sortinghat.git", rev = "master"}
+grimoirelab-toolkit = {git = "https://github.com/chaoss/grimoirelab-toolkit.git", rev = "master"}
+cereslib = {git = "https://github.com/chaoss/grimoirelab-cereslib.git", rev = "master"}
+graal = {git = "https://github.com/chaoss/grimoirelab-graal.git", rev = "master"}
 
 [build-system]
 requires = ["poetry>=0.12"]
