@@ -38,7 +38,7 @@ p2o = 'utils.p2o:main'
 gelk_mapping = 'utils.gelk_mapping:main'
 
 [tool.poetry.dependencies]
-python = "3.5 || ^3.6 || ^3.7"
+python = "^3.6"
 elasticsearch = "6.3.1"
 elasticsearch-dsl = "6.3.1"
 requests = "2.21.0"
@@ -48,7 +48,7 @@ PyMySQL = "0.9.3"
 pandas = ">=0.22.0,<=0.25.3"
 statsmodels = "^0.9.0"
 sortinghat = {branch = "master", git = "https://github.com/chaoss/grimoirelab-sortinghat", optional = true}
-grimoirelab-toolkit = {branch = "master", git = "https://github.com/chaoss/grimoirelab-toolkit"}
+grimoirelab-toolkit = "^0.1.12"
 cereslib = {branch = "master", git = "https://github.com/chaoss/grimoirelab-cereslib"}
 graal = {branch = "master", git = "https://github.com/chaoss/grimoirelab-graal"}
 perceval = {branch = "master", git = "https://github.com/chaoss/grimoirelab-perceval"}
