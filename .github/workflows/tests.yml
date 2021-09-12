@@ -28,8 +28,8 @@ jobs:
     name: Python ${{ matrix.python-version }} for ES ${{ matrix.elasticsearch-version }}
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8]
-        elasticsearch-version: [6.1.0, 7.2.0]
+        python-version: [3.8]
+        elasticsearch-version: [7.2.0]
     
     steps:
     - name: Checkout
@@ -69,5 +69,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd tests
-        poetry run coverage run --source=grimoire_elk run_tests.py
-        poetry run coveralls --service=github
+        poetry run coverage run --source=grimoire_elk.enriched.gitlabcomments test_gitlabcomments.py
+        poetry run coverage report -m
