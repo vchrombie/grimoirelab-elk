@@ -40,6 +40,7 @@ STATUS_FORCE_LIST = [408, 409, 429, 502, 503, 504]
 METADATA_FILTER_RAW = "metadata__filter_raw"
 REPO_LABELS = "repository_labels"
 SH_UNKNOWN_VALUE = "Unknown"
+EXTRA_PREFIX = "extra"
 
 logger = logging.getLogger(__name__)
 
