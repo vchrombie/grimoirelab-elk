@@ -57,6 +57,7 @@ UNKNOWN_PROJECT = "unknown"
 DEFAULT_PROJECT = "Main"
 DEFAULT_DB_USER = "root"
 CUSTOM_META_PREFIX = "cm"
+SH_UNKNOWN_VALUE = "Unknown"
 
 
 def metadata(func):
