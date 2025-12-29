@@ -32,7 +32,12 @@ from grimoirelab_toolkit.datetime import datetime_utcnow, str_to_datetime
 from ..elastic_analyzer import Analyzer
 from ..elastic_items import ElasticItems
 
-from .utils import grimoire_con, METADATA_FILTER_RAW, REPO_LABELS, anonymize_url
+from .utils import (
+    grimoire_con,
+    METADATA_FILTER_RAW,
+    REPO_LABELS,
+    anonymize_url,
+)
 from .identities import Identities
 from .studies import Studies
 
@@ -53,7 +58,7 @@ DEFAULT_PROJECT = "Main"
 DEFAULT_DB_USER = "root"
 CUSTOM_META_PREFIX = "cm"
 EXTRA_PREFIX = "extra"
-SH_UNKNOWN_VALUE = "Unknown"
+EXTRA_PREFIX = "extra"
 
 
 def metadata(func):

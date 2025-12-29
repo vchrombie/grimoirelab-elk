@@ -28,8 +28,7 @@ import re
 import requests
 import urllib3
 
-from grimoirelab_toolkit.datetime import (datetime_utcnow,
-                                          str_to_datetime)
+from grimoirelab_toolkit.datetime import datetime_utcnow, str_to_datetime
 
 
 BACKOFF_FACTOR = 0.2
@@ -38,14 +37,15 @@ MAX_RETRIES_ON_REDIRECT = 5
 MAX_RETRIES_ON_READ = 8
 MAX_RETRIES_ON_CONNECT = 21
 STATUS_FORCE_LIST = [408, 409, 429, 502, 503, 504]
-METADATA_FILTER_RAW = 'metadata__filter_raw'
-REPO_LABELS = 'repository_labels'
+METADATA_FILTER_RAW = "metadata__filter_raw"
+REPO_LABELS = "repository_labels"
+SH_UNKNOWN_VALUE = "Unknown"
 
 logger = logging.getLogger(__name__)
 
 
 def get_repository_filter(perceval_backend, perceval_backend_name, term=False):
-    """ Get the filter needed for get the items in a repository """
+    """Get the filter needed for get the items in a repository"""
     from .github import GITHUB
 
     filter_ = {}
@@ -53,32 +53,40 @@ def get_repository_filter(perceval_backend, perceval_backend_name, term=False):
     if not perceval_backend:
         return filter_
 
-    field = 'origin'
+    field = "origin"
     value = anonymize_url(perceval_backend.origin)
 
-    if perceval_backend_name in ["meetup", "nntp", "stackexchange", "jira", "hyperkitty"]:
+    if perceval_backend_name in [
+        "meetup",
+        "nntp",
+        "stackexchange",
+        "jira",
+        "hyperkitty",
+    ]:
         # Until tag is supported in all raw and enriched indexes
         # we should use origin. But stackexchange and meetup won't work with origin
         # because the tag must be included in the filter.
         # For nntp we have a common group server as origin, so we need to use also the tag.
         # And in jira we can filter by product, and the origin is the same jira server.
-        field = 'tag'
+        field = "tag"
         value = perceval_backend.tag
 
     if perceval_backend:
         if not term:
-            filter_ = {"name": field,
-                       "value": value}
+            filter_ = {"name": field, "value": value}
         else:
-            filter_ = '''
+            filter_ = """
                 {"term":
                     { "%s" : "%s"  }
                 }
-            ''' % (field, value)
+            """ % (
+                field,
+                value,
+            )
             # Filters are always a dict
             filter_ = json.loads(filter_)
 
-    if value in ['', GITHUB + '/', 'https://meetup.com/']:
+    if value in ["", GITHUB + "/", "https://meetup.com/"]:
         # Support for getting all items from a multiorigin index
         # In GitHub we receive GITHUB + '/', the site url without org and repo
         # In Meetup we receive https://meetup.com/ as the tag
@@ -88,25 +96,21 @@ def get_repository_filter(perceval_backend, perceval_backend_name, term=False):
 
 
 def get_confluence_spaces_filter(repo_spaces, perceval_backend_name):
-    """ Get the spaces needed for get the items in a confluence instance """
+    """Get the spaces needed for get the items in a confluence instance"""
 
     filter_ = {}
 
     if not repo_spaces or perceval_backend_name != "confluence":
         return filter_
 
-    field = 'data._expandable.space'
+    field = "data._expandable.space"
     value_path = "/rest/api/space/"
     values = repo_spaces
 
-    filter_ = {
-        "should": []
-    }
+    filter_ = {"should": []}
 
     for value in values:
-        new = {
-            "term": {field: value_path + value}
-        }
+        new = {"term": {field: value_path + value}}
         filter_["should"].append(new)
 
     return filter_
@@ -117,13 +121,13 @@ def anonymize_url(url):
 
     :param url: target url
     """
-    anonymized = re.sub('://.*@', '://', url)
+    anonymized = re.sub("://.*@", "://", url)
 
     return anonymized
 
 
 def get_time_diff_days(start, end):
-    ''' Number of days between two dates in UTC format  '''
+    """Number of days between two dates in UTC format"""
 
     if start is None or end is None:
         return None
@@ -135,7 +139,7 @@ def get_time_diff_days(start, end):
 
     seconds_day = float(60 * 60 * 24)
     diff_days = (end - start).total_seconds() / seconds_day
-    diff_days = float('%.2f' % diff_days)
+    diff_days = float("%.2f" % diff_days)
 
     return diff_days
 
@@ -146,12 +150,18 @@ def grimoire_con(insecure=True, conn_retries=MAX_RETRIES_ON_CONNECT, total=MAX_R
     # conn_retries = 21  # 209715.2 = 2.4d
     # total covers issues like 'ProtocolError('Connection aborted.')
     # Retry when there are errors in HTTP connections
-    retries = urllib3.util.Retry(total=total, connect=conn_retries, read=MAX_RETRIES_ON_READ,
-                                 redirect=MAX_RETRIES_ON_REDIRECT, backoff_factor=BACKOFF_FACTOR,
-                                 allowed_methods=False, status_forcelist=STATUS_FORCE_LIST)
+    retries = urllib3.util.Retry(
+        total=total,
+        connect=conn_retries,
+        read=MAX_RETRIES_ON_READ,
+        redirect=MAX_RETRIES_ON_REDIRECT,
+        backoff_factor=BACKOFF_FACTOR,
+        allowed_methods=False,
+        status_forcelist=STATUS_FORCE_LIST,
+    )
     adapter = requests.adapters.HTTPAdapter(max_retries=retries)
-    conn.mount('http://', adapter)
-    conn.mount('https://', adapter)
+    conn.mount("http://", adapter)
+    conn.mount("https://", adapter)
 
     if insecure:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -175,16 +185,13 @@ def get_last_enrich(backend_cmd, enrich_backend, filter_raw=None):
         # include the filter_raw text (taken from the projects.json) to the
         # list of filters used to retrieve the last enrich date.
         if filter_raw:
-            filter_raw_ = {
-                "name": METADATA_FILTER_RAW,
-                "value": filter_raw
-            }
+            filter_raw_ = {"name": METADATA_FILTER_RAW, "value": filter_raw}
 
             filters_.append(filter_raw_)
 
         signature = inspect.signature(backend.fetch)
 
-        if 'from_date' in signature.parameters:
+        if "from_date" in signature.parameters:
             if not enrich_backend.from_date:
                 last_enrich = None
             else:
@@ -194,9 +201,11 @@ def get_last_enrich(backend_cmd, enrich_backend, filter_raw=None):
                 # it means that no items for that origin are in the index, thus the
                 # `last_enrich` is set to None
                 last_enrich_filtered = enrich_backend.get_last_update_from_es(filters_)
-                last_enrich = get_min_last_enrich(enrich_backend.from_date, last_enrich_filtered)
+                last_enrich = get_min_last_enrich(
+                    enrich_backend.from_date, last_enrich_filtered
+                )
 
-        elif 'offset' in signature.parameters:
+        elif "offset" in signature.parameters:
             try:
                 offset = backend_cmd.offset
             except AttributeError:
@@ -212,7 +221,9 @@ def get_last_enrich(backend_cmd, enrich_backend, filter_raw=None):
                 last_enrich = None
             else:
                 last_enrich_filtered = enrich_backend.get_last_update_from_es(filters_)
-                last_enrich = get_min_last_enrich(enrich_backend.from_date, last_enrich_filtered)
+                last_enrich = get_min_last_enrich(
+                    enrich_backend.from_date, last_enrich_filtered
+                )
     else:
         last_enrich = enrich_backend.get_last_update_from_es()
 
@@ -229,7 +240,9 @@ def get_min_last_enrich(last_enrich, last_enrich_filtered):
 
 
 def get_diff_current_date(days=0, hours=0, minutes=0):
-    before_date = datetime_utcnow() - datetime.timedelta(days=days, hours=hours, minutes=minutes)
+    before_date = datetime_utcnow() - datetime.timedelta(
+        days=days, hours=hours, minutes=minutes
+    )
 
     return before_date
 
