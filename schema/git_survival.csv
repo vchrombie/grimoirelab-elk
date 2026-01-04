@@ -1,4 +1,4 @@
-name,type,aggregatable,description,Raw/Calculated
+name,type,aggregatable,description,raw / calculated
 addedlines,long,TRUE,"Number of lines added in this file by this commit (only in this file, not the whole commit).",GrimoireLab
 author_bot,boolean,TRUE,True if the given author is identified as a bot.,GrimoireLab / SortingHat
 author_domain,keyword,TRUE,Domain associated to the author in SortingHat profile.,GrimoireLab / SortingHat

@@ -1,60 +1,60 @@
-name,type,aggregatable,description
-Date,keyword,true,"String with the date when the message was sent. Includes timezone."
-From_bot,boolean,true,"True if the author is identified as a bot."
-From_domain,keyword,true,"Domain associated to the author in SortingHat profile."
-From_gender,keyword,true,"Author gender."
-From_gender_acc,long,true,"Accuracy to assess author gender."
-From_id,keyword,true,"Author Id from SortingHat."
-From_name,keyword,true,"Author name."
-From_org_name,keyword,true,"Author organization name from SortingHat profile."
-From_user_name,keyword,true,"Author's username from SortingHat profile."
-From_uuid,keyword,true,"Author UUID from SortingHat."
-Message-ID,keyword,true,"String with the unique message header Message-ID."
-Subject,keyword,true,"Subject of the message."
-Subject_analyzed,text,true,"Subject of the message."
-author_bot,boolean,true,"True if the given author is identified as a bot."
-author_domain,keyword,true,"Domain associated to the author in SortingHat profile."
-author_gender,keyword,true,"Author gender."
-author_gender_acc,long,true,"Accuracy to assess author gender."
-author_id,keyword,true,"Author Id from SortingHat."
-author_name,keyword,true,"Author name."
-author_org_name,keyword,true,"Author organization name from SortingHat profile."
-author_user_name,keyword,true,"Author's username from SortingHat profile."
-author_uuid,keyword,true,"Author UUID from SortingHat."
-body_extract,text,true,"Extract of the body from the email, depending on the size of the body it could have the entire message."
-body,text,false,"Body of the email."
-email_date,date,true,"Date when the message was sent."
-grimoire_creation_date,date,true,"Commit date (when the original author made the commit)."
-is_pipermail_message,long,true,"Value of 1 if the mailing list backend is pipermail."
-kip,long,true,"Id of the KIP item."
-kip_binding,long,true,"Value of 1 when the vote is binding, value of 0 when it is not."
-kip_discuss_inactive_days,float,true,"Number of days since last discussion message."
-kip_discuss_time_days,float,true,"Number of days between first and last discussion message."
-kip_final_status,keyword,true,"String with the final status of the KIP."
-kip_is_discuss,long,true,"Value of 1 when the message is part of a discussion, value of 0 when it is not."
-kip_is_first_discuss,long,true,"Value of 1 when the message is the first message of a discussion thread, value of 0 when it is not."
-kip_is_first_vote,long,true,"Value of 1 when the message is the first message of a voting thread, value of 0 when it is not."
-kip_is_last_discuss,long,true,"Value of 1 when the message is the last message of a discussion thread, value of 0 when it is not."
-kip_is_last_vote,long,true,"Value of 1 when the message is the last message of a voting thread, value of 0 when it is not."
-kip_is_vote,long,true,"Value of 1 when the message is a vote, value of 0 when it is not."
-kip_result,long,true,"Value of 1 when the KIP was accepted, value of -1 when discarded and empty otherwise."
-kip_start_end,keyword,true,"String with any of the following values: discuss_start, discuss_end, voting_start, voting_end."
-kip_status,keyword,true,"String with any of the following values: adopted, discussion, voting, inactive, discarded."
-kip_type,keyword,true,"String with any of the following values: discuss, vote."
-kip_vote,long,true,"Number with the vote: 1, 0, -1."
-kip_voting_inactive_days,float,true,"Number of days since last message with a vote."
-kip_voting_time_days,float,true,"Number of days between first and last voting message."
-list,keyword,true,"String with the uri of the mailing list."
-metadata__enriched_on,date,true,"Date when the item was enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich information."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich information."
-metadata__timestamp,date,true,"Date when the item was stored in RAW index."
-metadata__updated_on,date,true,"Date when the item was updated in its original data source."
-origin,keyword,true,"Original URL where the repository was retrieved from."
-project,keyword,true,"Project name."
-project_1,keyword,true,"Project name (if more than one level is allowed in project hierarchy)"
-root,boolean,true,"True when the message is sent by a root account."
-size,long,true,"Size of the body of the message."
-tag,keyword,true,"Perceval tag."
-tz,long,true,"Number representation of the timezone."
-uuid,keyword,true,"Perceval UUID."
+name,type,aggregatable,description,raw / calculated
+Date,keyword,true,String with the date when the message was sent. Includes timezone.,Data Source / Parsed
+From_bot,boolean,true,True if the author is identified as a bot.,GrimoireLab / SortingHat
+From_domain,keyword,true,Domain associated to the author in SortingHat profile.,GrimoireLab / SortingHat
+From_gender,keyword,true,Author gender.,Data Source / Parsed
+From_gender_acc,long,true,Accuracy to assess author gender.,Data Source / Parsed
+From_id,keyword,true,Author Id from SortingHat.,Data Source / Parsed
+From_name,keyword,true,Author name.,Data Source / Parsed
+From_org_name,keyword,true,Author organization name from SortingHat profile.,GrimoireLab / SortingHat
+From_user_name,keyword,true,Author's username from SortingHat profile.,Data Source / Parsed
+From_uuid,keyword,true,Author UUID from SortingHat.,GrimoireLab / SortingHat
+Message-ID,keyword,true,String with the unique message header Message-ID.,Data Source / Parsed
+Subject,keyword,true,Subject of the message.,Data Source / Parsed
+Subject_analyzed,text,true,Subject of the message.,Data Source / Parsed
+author_bot,boolean,true,True if the given author is identified as a bot.,GrimoireLab / SortingHat
+author_domain,keyword,true,Domain associated to the author in SortingHat profile.,GrimoireLab / SortingHat
+author_gender,keyword,true,Author gender.,GrimoireLab / SortingHat
+author_gender_acc,long,true,Accuracy to assess author gender.,GrimoireLab / SortingHat
+author_id,keyword,true,Author Id from SortingHat.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author organization name from SortingHat profile.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author's username from SortingHat profile.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author UUID from SortingHat.,GrimoireLab / SortingHat
+body_extract,text,true,"Extract of the body from the email, depending on the size of the body it could have the entire message.",Data Source / Parsed
+body,text,false,Body of the email.,Data Source / Parsed
+email_date,date,true,Date when the message was sent.,Data Source / Parsed
+grimoire_creation_date,date,true,Commit date (when the original author made the commit).,GrimoireLab
+is_pipermail_message,long,true,Value of 1 if the mailing list backend is pipermail.,GrimoireLab
+kip,long,true,Id of the KIP item.,Data Source / Parsed
+kip_binding,long,true,"Value of 1 when the vote is binding, value of 0 when it is not.",Data Source / Parsed
+kip_discuss_inactive_days,float,true,Number of days since last discussion message.,Data Source / Parsed
+kip_discuss_time_days,float,true,Number of days between first and last discussion message.,Data Source / Parsed
+kip_final_status,keyword,true,String with the final status of the KIP.,Data Source / Parsed
+kip_is_discuss,long,true,"Value of 1 when the message is part of a discussion, value of 0 when it is not.",Data Source / Parsed
+kip_is_first_discuss,long,true,"Value of 1 when the message is the first message of a discussion thread, value of 0 when it is not.",Data Source / Parsed
+kip_is_first_vote,long,true,"Value of 1 when the message is the first message of a voting thread, value of 0 when it is not.",Data Source / Parsed
+kip_is_last_discuss,long,true,"Value of 1 when the message is the last message of a discussion thread, value of 0 when it is not.",Data Source / Parsed
+kip_is_last_vote,long,true,"Value of 1 when the message is the last message of a voting thread, value of 0 when it is not.",Data Source / Parsed
+kip_is_vote,long,true,"Value of 1 when the message is a vote, value of 0 when it is not.",Data Source / Parsed
+kip_result,long,true,"Value of 1 when the KIP was accepted, value of -1 when discarded and empty otherwise.",Data Source / Parsed
+kip_start_end,keyword,true,"String with any of the following values: discuss_start, discuss_end, voting_start, voting_end.",Data Source / Parsed
+kip_status,keyword,true,"String with any of the following values: adopted, discussion, voting, inactive, discarded.",Data Source / Parsed
+kip_type,keyword,true,"String with any of the following values: discuss, vote.",Data Source / Parsed
+kip_vote,long,true,"Number with the vote: 1, 0, -1.",Data Source / Parsed
+kip_voting_inactive_days,float,true,Number of days since last message with a vote.,Data Source / Parsed
+kip_voting_time_days,float,true,Number of days between first and last voting message.,Data Source / Parsed
+list,keyword,true,String with the uri of the mailing list.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Original URL where the repository was retrieved from.,Data Source / Parsed
+project,keyword,true,Project name.,GrimoireLab / projects.json
+project_1,keyword,true,Project name (if more than one level is allowed in project hierarchy),GrimoireLab / projects.json
+root,boolean,true,True when the message is sent by a root account.,Data Source / Parsed
+size,long,true,Size of the body of the message.,Data Source / Parsed
+tag,keyword,true,Perceval tag.,Data Source / Parsed
+tz,long,true,Number representation of the timezone.,Data Source / Parsed
+uuid,keyword,true,Perceval UUID.,Data Source / Parsed

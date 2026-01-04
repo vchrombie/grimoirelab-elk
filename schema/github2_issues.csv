@@ -1,89 +1,89 @@
-name,type,aggregatable,description
-<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv."
-assignee_data_bot,boolean,true,"True/False if the assignee is a bot or not."
-assignee_data_domain,keyword,true,"Assignee's domain name from SortingHat profile."
-assignee_data_gender,keyword,true,"Assignee gender."
-assignee_data_gender_acc,keyword,true,"Accuracy to assess assignee gender."
-assignee_data_id,keyword,true,"Assignee's id from SortingHat profile."
-assignee_data_name,keyword,true,"Assignee's name."
-assignee_data_org_name,keyword,true,"Assignee's organization name from SortingHat profile."
-assignee_data_user_name,keyword,true,"Assignee's username from SortingHat profile."
-assignee_data_uuid,keyword,true,"Assignee's UUID from SortingHat profile."
-assignee_domain,keyword,true,"Assignee's domain name from GitHub."
-assignee_geolocation,geo_point,true,"Assignee's global location using coordinates."
-assignee_location,keyword,true,"Assignee's geographical location."
-assignee_login,keyword,true,"Assignee's login name from GitHub."
-assignee_name,keyword,true,"Assignee's name from GitHub."
-assignee_org,keyword,true,"Assignee's organization name from GitHub."
-author_bot,boolean,true,"True/False if the author is a bot or not."
-author_domain,keyword,true,"Author's domain name from SortingHat profile."
-author_gender,keyword,true,"Author gender."
-author_gender_acc,keyword,true,"Accuracy to assess author gender."
-author_id,keyword,true,"Author's ID from SortingHat profile."
-author_name,keyword,true,"Author's name."
-author_org_name,keyword,true,"Author's organization name from SortingHat profile."
-author_user_name,keyword,true,"Author's username from SortingHat profile."
-author_uuid,keyword,true,"Author's UUID from SortingHat profile."
-body,keyword,true,"Body of the issue/comment."
-body_analyzed,text,false,"Body of the issue/comment."
-comment_updated_at,date,true,"Date when the comment was updated."
-demography_max_date,date,true,"Date of the latest issue of the corresponding author. Available only when demography study is active."
-demography_min_date,date,true,"Date of the first (oldest) issue of the corresponding author. Available only when demography study is active."
-github_repo,keyword,true,"The name of the GitHub repository."
-grimoire_creation_date,date,true,"Issue/comment creation date."
-id,keyword,true,"Issue/comment ID."
-is_github_issue,long,true,"Used to separate issues from comments."
-is_github_issue_comment,long,true,"Used to separate comments from issues."
-is_github_comment,long,true,"Used to unify pull request and issue comments."
-issue_closed_at,date,true,"Date when an issue was closed."
-issue_created_at,date,true,"Date when an issue was opened."
-issue_id,long,true,"Issue ID on GitHub."
-issue_id_in_repo,keyword,true,"The issue's ID in the repository."
-issue_labels,keyword,true,"The labels assigned to an issue."
-issue_pull_request,boolean,true,"True if the issue is a pull request."
-issue_state,keyword,true,"State of the issue (open/closed)."
-issue_updated_at,date,true,"Date when the issue was last updated."
-issue_url,keyword,true,"Full URL of the issue."
-item_type,keyword,true,"The type of the item (issue/comment)."
-metadata__enriched_on,date,true,"Date when the data were enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich the data."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich the data."
-metadata__timestamp,date,true,"Date when the item was stored in ElasticSearch raw index."
-metadata__updated_on,date,true,"Date when the item was updated on its original data source."
-origin,keyword,true,"The original URL from which the repository was retrieved from."
-project_1,keyword,true,"Used if more than one project levels are allowed in the project hierarchy."
-project,keyword,true,"Project name."
-reaction_confused,long,true,"Number of reactions 'confused'."
-reaction_eyes,long,true,"Number of reactions 'eyes'."
-reaction_heart,long,true,"Number of reactions 'heart'."
-reaction_hooray,long,true,"Number of reactions 'hooray'."
-reaction_rocket,long,true,"Number of reactions 'rocket'."
-reaction_thumb_down,long,true,"Number of reactions '-1'."
-reaction_thumb_up,long,true,"Number of reactions '+1'."
-reaction_total_count,long,true,"Number of total reactions."
-repository,keyword,true,"Repository name."
-repository_labels,keyword,true,"Custom repository labels defined by the user."
-sub_type,keyword,true,"Type of the comment (issue comment)."
-tag,keyword,true,"Perceval tag."
-time_open_days,float,true,"Time the item is open counted in days."
-time_to_close_days,float,true,"Time to close an issue counted in days."
-time_to_first_attention,float,true,"Time to first attention to an issue counted in days."
-issue_title_analyzed,text,false,"Issue title split by terms to allow searching."
-issue_title,keyword,true,"The title of the issue."
-url,keyword,true,"Url of the issue/comment."
-user_data_bot,boolean,true,"True/False if the user is a bot or not."
-user_data_domain,keyword,true,"User's domain name from SortingHat profile."
-user_data_gender,keyword,true,"User gender."
-user_data_gender_acc,keyword,true,"Accuracy to assess user gender."
-user_data_id,keyword,true,"User's ID from SortingHat profile."
-user_data_name,keyword,true,"User's name from SortingHat profile."
-user_data_org_name,keyword,true,"User's organization name from SortingHat profile."
-user_data_user_name,keyword,true,"User's username from SortingHat profile."
-user_data_uuid,keyword,true,"User's UUID from SortingHat profile."
-user_domain,keyword,true,"User's domain name from GitHub."
-user_geolocation,geo_point,true,"User's global location using coordinates."
-user_location,keyword,true,"User's geographical location."
-user_login,keyword,true,"User's login name from GitHub."
-user_name,keyword,true,"User's name."
-user_org,keyword,true,"User's organization name."
-uuid,keyword,true,"Perceval UUID."
+name,type,aggregatable,description,raw / calculated
+<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv.",Data Source / Parsed
+assignee_data_bot,boolean,true,True/False if the assignee is a bot or not.,GrimoireLab / SortingHat
+assignee_data_domain,keyword,true,Assignee's domain name from SortingHat profile.,GrimoireLab / SortingHat
+assignee_data_gender,keyword,true,Assignee gender.,GrimoireLab / SortingHat
+assignee_data_gender_acc,keyword,true,Accuracy to assess assignee gender.,GrimoireLab / SortingHat
+assignee_data_id,keyword,true,Assignee's id from SortingHat profile.,GrimoireLab / SortingHat
+assignee_data_name,keyword,true,Assignee's name.,GrimoireLab / SortingHat
+assignee_data_org_name,keyword,true,Assignee's organization name from SortingHat profile.,GrimoireLab / SortingHat
+assignee_data_user_name,keyword,true,Assignee's username from SortingHat profile.,GrimoireLab / SortingHat
+assignee_data_uuid,keyword,true,Assignee's UUID from SortingHat profile.,GrimoireLab / SortingHat
+assignee_domain,keyword,true,Assignee's domain name from GitHub.,GrimoireLab / SortingHat
+assignee_geolocation,geo_point,true,Assignee's global location using coordinates.,GrimoireLab / SortingHat
+assignee_location,keyword,true,Assignee's geographical location.,GrimoireLab / SortingHat
+assignee_login,keyword,true,Assignee's login name from GitHub.,GrimoireLab / SortingHat
+assignee_name,keyword,true,Assignee's name from GitHub.,GrimoireLab / SortingHat
+assignee_org,keyword,true,Assignee's organization name from GitHub.,GrimoireLab / SortingHat
+author_bot,boolean,true,True/False if the author is a bot or not.,GrimoireLab / SortingHat
+author_domain,keyword,true,Author's domain name from SortingHat profile.,GrimoireLab / SortingHat
+author_gender,keyword,true,Author gender.,GrimoireLab / SortingHat
+author_gender_acc,keyword,true,Accuracy to assess author gender.,GrimoireLab / SortingHat
+author_id,keyword,true,Author's ID from SortingHat profile.,GrimoireLab / SortingHat
+author_name,keyword,true,Author's name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author's organization name from SortingHat profile.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author's username from SortingHat profile.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author's UUID from SortingHat profile.,GrimoireLab / SortingHat
+body,keyword,true,Body of the issue/comment.,Data Source / Parsed
+body_analyzed,text,false,Body of the issue/comment.,Data Source / Parsed
+comment_updated_at,date,true,Date when the comment was updated.,Data Source / Parsed
+demography_max_date,date,true,Date of the latest issue of the corresponding author. Available only when demography study is active.,Data Source / Parsed
+demography_min_date,date,true,Date of the first (oldest) issue of the corresponding author. Available only when demography study is active.,Data Source / Parsed
+github_repo,keyword,true,The name of the GitHub repository.,Data Source / Parsed
+grimoire_creation_date,date,true,Issue/comment creation date.,GrimoireLab
+id,keyword,true,Issue/comment ID.,Data Source / Parsed
+is_github_issue,long,true,Used to separate issues from comments.,GrimoireLab
+is_github_issue_comment,long,true,Used to separate comments from issues.,GrimoireLab
+is_github_comment,long,true,Used to unify pull request and issue comments.,GrimoireLab
+issue_closed_at,date,true,Date when an issue was closed.,Data Source / Parsed
+issue_created_at,date,true,Date when an issue was opened.,Data Source / Parsed
+issue_id,long,true,Issue ID on GitHub.,Data Source / Parsed
+issue_id_in_repo,keyword,true,The issue's ID in the repository.,Data Source / Parsed
+issue_labels,keyword,true,The labels assigned to an issue.,Data Source / Parsed
+issue_pull_request,boolean,true,True if the issue is a pull request.,Data Source / Parsed
+issue_state,keyword,true,State of the issue (open/closed).,Data Source / Parsed
+issue_updated_at,date,true,Date when the issue was last updated.,Data Source / Parsed
+issue_url,keyword,true,Full URL of the issue.,Data Source / Parsed
+item_type,keyword,true,The type of the item (issue/comment).,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the data were enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich the data.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich the data.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in ElasticSearch raw index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated on its original data source.,GrimoireLab
+origin,keyword,true,The original URL from which the repository was retrieved from.,Data Source / Parsed
+project_1,keyword,true,Used if more than one project levels are allowed in the project hierarchy.,GrimoireLab / projects.json
+project,keyword,true,Project name.,GrimoireLab / projects.json
+reaction_confused,long,true,Number of reactions 'confused'.,Data Source / Parsed
+reaction_eyes,long,true,Number of reactions 'eyes'.,Data Source / Parsed
+reaction_heart,long,true,Number of reactions 'heart'.,Data Source / Parsed
+reaction_hooray,long,true,Number of reactions 'hooray'.,Data Source / Parsed
+reaction_rocket,long,true,Number of reactions 'rocket'.,Data Source / Parsed
+reaction_thumb_down,long,true,Number of reactions '-1'.,Data Source / Parsed
+reaction_thumb_up,long,true,Number of reactions '+1'.,Data Source / Parsed
+reaction_total_count,long,true,Number of total reactions.,Data Source / Parsed
+repository,keyword,true,Repository name.,Data Source / Parsed
+repository_labels,keyword,true,Custom repository labels defined by the user.,GrimoireLab / projects.json
+sub_type,keyword,true,Type of the comment (issue comment).,Data Source / Parsed
+tag,keyword,true,Perceval tag.,Data Source / Parsed
+time_open_days,float,true,Time the item is open counted in days.,Data Source / Parsed
+time_to_close_days,float,true,Time to close an issue counted in days.,Data Source / Parsed
+time_to_first_attention,float,true,Time to first attention to an issue counted in days.,Data Source / Parsed
+issue_title_analyzed,text,false,Issue title split by terms to allow searching.,Data Source / Parsed
+issue_title,keyword,true,The title of the issue.,Data Source / Parsed
+url,keyword,true,Url of the issue/comment.,Data Source / Parsed
+user_data_bot,boolean,true,True/False if the user is a bot or not.,GrimoireLab / SortingHat
+user_data_domain,keyword,true,User's domain name from SortingHat profile.,GrimoireLab / SortingHat
+user_data_gender,keyword,true,User gender.,GrimoireLab / SortingHat
+user_data_gender_acc,keyword,true,Accuracy to assess user gender.,GrimoireLab / SortingHat
+user_data_id,keyword,true,User's ID from SortingHat profile.,GrimoireLab / SortingHat
+user_data_name,keyword,true,User's name from SortingHat profile.,GrimoireLab / SortingHat
+user_data_org_name,keyword,true,User's organization name from SortingHat profile.,GrimoireLab / SortingHat
+user_data_user_name,keyword,true,User's username from SortingHat profile.,GrimoireLab / SortingHat
+user_data_uuid,keyword,true,User's UUID from SortingHat profile.,GrimoireLab / SortingHat
+user_domain,keyword,true,User's domain name from GitHub.,GrimoireLab / SortingHat
+user_geolocation,geo_point,true,User's global location using coordinates.,GrimoireLab / SortingHat
+user_location,keyword,true,User's geographical location.,GrimoireLab / SortingHat
+user_login,keyword,true,User's login name from GitHub.,GrimoireLab / SortingHat
+user_name,keyword,true,User's name.,GrimoireLab / SortingHat
+user_org,keyword,true,User's organization name.,GrimoireLab / SortingHat
+uuid,keyword,true,Perceval UUID.,Data Source / Parsed

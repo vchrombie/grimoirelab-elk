@@ -1,4 +1,4 @@
-name,type,aggregatable,description,Raw / Calculated
+name,type,aggregatable,description,raw / calculated
 fetched_on,long,TRUE,"Timestamp when the item was fetched, equivalent to metadata__updated_on.",GrimoireLab
 forks_count,long,TRUE,Number of forks of the repository.,Data Source / Parsed
 grimoire_creation_date,date,TRUE,Date when the repo was fetched.,Data Source / Parsed

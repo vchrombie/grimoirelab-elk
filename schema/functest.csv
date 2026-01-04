@@ -1,28 +1,28 @@
-name,type
-api_id,keyword
-build_tag,keyword
-case_name,keyword
-criteria,keyword
-duration,float
-duration_from_api,float
-failures,long
-grimoire_creation_date,date
-installer,keyword
-is_functest_func_test,long
-metadata__enriched_on,date
-metadata__gelk_backend_name,keyword
-metadata__gelk_version,keyword
-metadata__timestamp,date
-metadata__updated_on,date
-origin,keyword
-pod_name,keyword
-project,keyword
-repository_labels,keyword
-scenario,keyword
-start_date,keyword
-stop_date,keyword
-tag,keyword
-tests,long
-trust_indicator,long
-uuid,keyword
-version,keyword
+name,type,aggregatable,description,raw / calculated
+api_id,keyword,true,Api id.,Data Source / Parsed
+build_tag,keyword,true,Build tag.,Data Source / Parsed
+case_name,keyword,true,Case name.,Data Source / Parsed
+criteria,keyword,true,Criteria.,Data Source / Parsed
+duration,float,true,Duration.,Data Source / Parsed
+duration_from_api,float,true,Duration from api.,Data Source / Parsed
+failures,long,true,Failures.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+installer,keyword,true,Installer.,Data Source / Parsed
+is_functest_func_test,long,true,Is functest func test.,GrimoireLab
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+pod_name,keyword,true,Pod name.,Data Source / Parsed
+project,keyword,true,Project assigned to the item.,GrimoireLab / projects.json
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+scenario,keyword,true,Scenario.,Data Source / Parsed
+start_date,keyword,true,Start date.,Data Source / Parsed
+stop_date,keyword,true,Stop date.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+tests,long,true,Tests.,Data Source / Parsed
+trust_indicator,long,true,Trust indicator.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed
+version,keyword,true,Version.,Data Source / Parsed

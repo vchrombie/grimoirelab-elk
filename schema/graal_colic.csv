@@ -1,27 +1,27 @@
-name,type,aggregatable,description
-author,string,true,"Author name."
-author_date,date,true,"Author date (when the original author made the commit)."
-commit_date,date,true,"Date when committer made this commit."
-commit_sha,string,true,"Commit hash."
-committer,string,true,"Author name."
-copyrights,string,true,"Copyright definitions found in file by analyzer."
-file_path,string,true,"File Path"
-grimoire_creation_date,date,true,"Commit date (when the original author made the commit)."
-has_copyright,number,true,"1 if copyright definition exists else 0"
-has_license,number,true,"1 if license definition exists else 0"
-id,string,true,"Graal Item Id."
-license_name,string,true,"License definitions found in file by analyzer"
-licenses,string,true,"License keyword/tag."
-message,string,true,"Commit message as a single String."
-metadata__enriched_on,date,true,"Date when the item was enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich information."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich information."
-metadata__timestamp,date,true,"Date when the item was stored in RAW index."
-metadata__updated_on,date,true,"Date when the item was updated in its original data source."
-modules,string,true,"Modules which the file is part of."
-origin,keyword,true,"Original URL where the repository was retrieved from."
-project_1,keyword,true,"Project (if more than one level is allowed in project hierarchy)"
-project,keyword,true,"Project."
-repo_url,keyword,true,"Anonymized URL where the repository was retrieved from."
-tag,keyword,true,"Graal tag."
-uuid,keyword,true,"Graal UUID."
+name,type,aggregatable,description,raw / calculated
+author,string,true,Author name.,Data Source / Parsed
+author_date,date,true,Author date (when the original author made the commit).,GrimoireLab / SortingHat
+commit_date,date,true,Date when committer made this commit.,Data Source / Parsed
+commit_sha,string,true,Commit hash.,Data Source / Parsed
+committer,string,true,Author name.,Data Source / Parsed
+copyrights,string,true,Copyright definitions found in file by analyzer.,Data Source / Parsed
+file_path,string,true,File Path,Data Source / Parsed
+grimoire_creation_date,date,true,Commit date (when the original author made the commit).,GrimoireLab
+has_copyright,number,true,1 if copyright definition exists else 0,Data Source / Parsed
+has_license,number,true,1 if license definition exists else 0,Data Source / Parsed
+id,string,true,Graal Item Id.,Data Source / Parsed
+license_name,string,true,License definitions found in file by analyzer,Data Source / Parsed
+licenses,string,true,License keyword/tag.,Data Source / Parsed
+message,string,true,Commit message as a single String.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+modules,string,true,Modules which the file is part of.,Data Source / Parsed
+origin,keyword,true,Original URL where the repository was retrieved from.,Data Source / Parsed
+project_1,keyword,true,Project (if more than one level is allowed in project hierarchy),GrimoireLab / projects.json
+project,keyword,true,Project.,GrimoireLab / projects.json
+repo_url,keyword,true,Anonymized URL where the repository was retrieved from.,Data Source / Parsed
+tag,keyword,true,Graal tag.,Data Source / Parsed
+uuid,keyword,true,Graal UUID.,Data Source / Parsed

@@ -1,42 +1,42 @@
-name,type
-ancestors_links,keyword
-ancestors_titles,keyword
-author_bot,boolean
-author_id,keyword
-author_name,keyword
-author_org_name,keyword
-author_user_name,keyword
-author_uuid,keyword
-by_bot,boolean
-by_id,keyword
-by_name,keyword
-by_org_name,keyword
-by_user_name,keyword
-by_uuid,keyword
-content_url,keyword
-date,date
-grimoire_creation_date,date
-id,keyword
-is_attachment,long
-is_blogpost,long
-is_com,long
-is_comment,long
-is_confluence_confluence,long
-is_new_page,long
-is_page,long
-message,keyword
-metadata__enriched_on,date
-metadata__gelk_backend_name,keyword
-metadata__gelk_version,keyword
-metadata__timestamp,date
-metadata__updated_on,date
-origin,keyword
-repository_labels,keyword
-status,keyword
-tag,keyword
-title_analyzed,text
-title,keyword
-type,keyword
-url,keyword
-uuid,keyword
-version,long
+name,type,aggregatable,description,raw / calculated
+ancestors_links,keyword,true,Ancestors links.,Data Source / Parsed
+ancestors_titles,keyword,true,Ancestors titles.,Data Source / Parsed
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+by_bot,boolean,true,By bot.,GrimoireLab / SortingHat
+by_id,keyword,true,By id.,Data Source / Parsed
+by_name,keyword,true,By name.,Data Source / Parsed
+by_org_name,keyword,true,By org name.,GrimoireLab / SortingHat
+by_user_name,keyword,true,By user name.,Data Source / Parsed
+by_uuid,keyword,true,By uuid.,GrimoireLab / SortingHat
+content_url,keyword,true,Content url.,Data Source / Parsed
+date,date,true,Date.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+id,keyword,true,Id.,Data Source / Parsed
+is_attachment,long,true,Is attachment.,GrimoireLab
+is_blogpost,long,true,Is blogpost.,GrimoireLab
+is_com,long,true,Is com.,GrimoireLab
+is_comment,long,true,Is comment.,GrimoireLab
+is_confluence_confluence,long,true,Is confluence confluence.,GrimoireLab
+is_new_page,long,true,Is new page.,GrimoireLab
+is_page,long,true,Is page.,GrimoireLab
+message,keyword,true,Message.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+status,keyword,true,Status.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+title_analyzed,text,false,Title analyzed.,Data Source / Parsed
+title,keyword,true,Title.,Data Source / Parsed
+type,keyword,true,Type.,Data Source / Parsed
+url,keyword,true,Url.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed
+version,long,true,Version.,Data Source / Parsed

@@ -1,4 +1,4 @@
-name,type,aggregatable,description,Raw / Calculated
+name,type,aggregatable,description,raw / calculated
 average_opened_time,long,TRUE,Average of issue opened time.,GrimoireLab
 grimoire_creation_date,date,TRUE,Issue creation date.,Data Source / Parsed
 interval_days,long,TRUE,Number of days between each analysis.,GrimoireLab

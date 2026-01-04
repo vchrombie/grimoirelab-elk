@@ -1,49 +1,49 @@
-name,type
-answer_status,keyword
-author_bot,boolean
-author_id,keyword
-author_name,keyword
-author_org_name,keyword
-author_trust_level,long
-author_url,keyword
-author_user_name,keyword
-author_uuid,keyword
-categories,keyword
-category_id,long
-category_name,keyword
-display_username,keyword
-first_answer,long
-first_reply_time,float
-grimoire_creation_date,date
-id,keyword
-is_accepted_answer,long
-is_discourse_answer,long
-is_discourse_question,long
-metadata__enriched_on,date
-metadata__gelk_backend_name,keyword
-metadata__gelk_version,keyword
-metadata__timestamp,date
-metadata__updated_on,date
-origin,keyword
-project_1,keyword
-project,keyword
-question_accepted_answer_id,long
-question_has_accepted_answer,boolean
-question_like_count,long
-question_participants,long
-question_pinned_at,date
-question_pinned,boolean
-question_pinned_globally,boolean
-question_posts_count,long
-question_replies,long
-question_title,keyword
-question_views,long
-reads,long
-reply_count,long
-repository_labels,keyword
-score,float
-tag,keyword
-type,keyword
-url,keyword
-username,keyword
-uuid,keyword
+name,type,aggregatable,description,raw / calculated
+answer_status,keyword,true,Answer status.,Data Source / Parsed
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_trust_level,long,true,Author trust level.,GrimoireLab / SortingHat
+author_url,keyword,true,Author url.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+categories,keyword,true,Categories.,Data Source / Parsed
+category_id,long,true,Category id.,Data Source / Parsed
+category_name,keyword,true,Category name.,Data Source / Parsed
+display_username,keyword,true,Display username.,Data Source / Parsed
+first_answer,long,true,First answer.,Data Source / Parsed
+first_reply_time,float,true,First reply time.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+id,keyword,true,Id.,Data Source / Parsed
+is_accepted_answer,long,true,Is accepted answer.,GrimoireLab
+is_discourse_answer,long,true,Is discourse answer.,GrimoireLab
+is_discourse_question,long,true,Is discourse question.,GrimoireLab
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+project_1,keyword,true,Project (if more than one level is allowed in project hierarchy).,GrimoireLab / projects.json
+project,keyword,true,Project assigned to the item.,GrimoireLab / projects.json
+question_accepted_answer_id,long,true,Question accepted answer id.,Data Source / Parsed
+question_has_accepted_answer,boolean,true,Question has accepted answer.,Data Source / Parsed
+question_like_count,long,true,Question like count.,Data Source / Parsed
+question_participants,long,true,Question participants.,Data Source / Parsed
+question_pinned_at,date,true,Question pinned at.,Data Source / Parsed
+question_pinned,boolean,true,Question pinned.,Data Source / Parsed
+question_pinned_globally,boolean,true,Question pinned globally.,Data Source / Parsed
+question_posts_count,long,true,Question posts count.,Data Source / Parsed
+question_replies,long,true,Question replies.,Data Source / Parsed
+question_title,keyword,true,Question title.,Data Source / Parsed
+question_views,long,true,Question views.,Data Source / Parsed
+reads,long,true,Reads.,Data Source / Parsed
+reply_count,long,true,Reply count.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+score,float,true,Score.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+type,keyword,true,Type.,Data Source / Parsed
+url,keyword,true,Url.,Data Source / Parsed
+username,keyword,true,Username.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed

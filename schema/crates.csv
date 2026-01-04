@@ -1,50 +1,50 @@
-name,type,aggregatable
-metadata__timestamp,date,true
-metadata__updated_on,date,true
-updated_at,date,true
-_id,long,true
-_index,text,true
-_score,long,true
-_type,text,true
-author_avatar,text,true
-author_bot,boolean,true
-author_domain,text,true
-author_id,text,true
-author_login,text,true
-author_name,text,true
-author_org_name,text,true
-author_url,text,true
-author_user_name,text,true
-author_uuid,text,true
-badges,text,true
-categories,text,true
-created_at,date,true
-description,text,true
-description_analyzed,text,false
-downloads,long,true
-grimoire_creation_date,date,true
-homepage,text,true
-id,text,true
-is_crates_crates,long,true
-keywords,text,true
-max_version,text,true
-metadata__enriched_on,date,true
-metadata__gelk_backend_name,text,true
-metadata__gelk_version,text,true
-name,text,true
-origin,text,true
-owner_user_data_bot,boolean,true
-owner_user_data_domain,text,true
-owner_user_data_id,text,true
-owner_user_data_name,text,true
-owner_user_data_org_name,text,true
-owner_user_data_user_name,text,true
-owner_user_data_uuid,text,true
-project,text,true
-project_1,text,true
-recent_downloads,long,true
-repository,text,true
-repository_labels,keyword,true
-tag,text,true
-uuid,text,true
-versions,text,true
+name,type,aggregatable,description,raw / calculated
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+updated_at,date,true,Updated at.,Data Source / Parsed
+_id,long,true,Id.,Data Source / Parsed
+_index,text,true,Index.,Data Source / Parsed
+_score,long,true,Score.,Data Source / Parsed
+_type,text,true,Type.,Data Source / Parsed
+author_avatar,text,true,Author avatar.,GrimoireLab / SortingHat
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_domain,text,true,Author domain.,GrimoireLab / SortingHat
+author_id,text,true,Author id.,GrimoireLab / SortingHat
+author_login,text,true,Author login.,GrimoireLab / SortingHat
+author_name,text,true,Author name.,GrimoireLab / SortingHat
+author_org_name,text,true,Author org name.,GrimoireLab / SortingHat
+author_url,text,true,Author url.,GrimoireLab / SortingHat
+author_user_name,text,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,text,true,Author uuid.,GrimoireLab / SortingHat
+badges,text,true,Badges.,Data Source / Parsed
+categories,text,true,Categories.,Data Source / Parsed
+created_at,date,true,Created at.,Data Source / Parsed
+description,text,true,Description.,Data Source / Parsed
+description_analyzed,text,false,Description analyzed.,Data Source / Parsed
+downloads,long,true,Downloads.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+homepage,text,true,Homepage.,Data Source / Parsed
+id,text,true,Id.,Data Source / Parsed
+is_crates_crates,long,true,Is crates crates.,GrimoireLab
+keywords,text,true,Keywords.,Data Source / Parsed
+max_version,text,true,Max version.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,text,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,text,true,Version of the backend used to enrich information.,GrimoireLab
+name,text,true,Name.,Data Source / Parsed
+origin,text,true,Repository or source URL.,Data Source / Parsed
+owner_user_data_bot,boolean,true,Owner user data bot.,GrimoireLab / SortingHat
+owner_user_data_domain,text,true,Owner user data domain.,GrimoireLab / SortingHat
+owner_user_data_id,text,true,Owner user data id.,GrimoireLab / SortingHat
+owner_user_data_name,text,true,Owner user data name.,GrimoireLab / SortingHat
+owner_user_data_org_name,text,true,Owner user data org name.,GrimoireLab / SortingHat
+owner_user_data_user_name,text,true,Owner user data user name.,GrimoireLab / SortingHat
+owner_user_data_uuid,text,true,Owner user data uuid.,GrimoireLab / SortingHat
+project,text,true,Project assigned to the item.,GrimoireLab / projects.json
+project_1,text,true,Project (if more than one level is allowed in project hierarchy).,GrimoireLab / projects.json
+recent_downloads,long,true,Recent downloads.,Data Source / Parsed
+repository,text,true,Repository.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+tag,text,true,Tag provided by the data source.,Data Source / Parsed
+uuid,text,true,Item UUID.,Data Source / Parsed
+versions,text,true,Versions.,Data Source / Parsed

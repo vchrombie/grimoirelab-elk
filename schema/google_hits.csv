@@ -1,0 +1,18 @@
+name,type,aggregatable,description,raw / calculated
+fetched_on,date,true,Fetched on.,Data Source / Parsed
+hits,long,true,Hits.,Data Source / Parsed
+id,keyword,true,Id.,Data Source / Parsed
+keywords,keyword,true,Keywords.,Data Source / Parsed
+type,keyword,true,Type.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+is_google_hits_hits,long,true,Is google hits hits.,GrimoireLab
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+metadata__filter_raw,keyword,true,Raw filter applied when collecting data.,GrimoireLab
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json

@@ -1,5 +1,5 @@
-name,type,aggregatable,description,Raw / Calculated
-<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv.",
+name,type,aggregatable,description,raw / calculated
+<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv.",Data Source / Parsed
 actor_bot,boolean,TRUE,True/False if the event actor is a bot or not from SortingHat profile.,GrimoireLab / SortingHat
 actor_domain,keyword,TRUE,Event actor domain name from SortingHat profile.,GrimoireLab / SortingHat
 actor_gender,keyword,TRUE,"Event actor gender, based on her name, from SortingHat (disabled by default).",GrimoireLab / SortingHat

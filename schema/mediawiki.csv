@@ -1,29 +1,29 @@
-name,type
-author_bot,boolean
-author_id,keyword
-author_name,keyword
-author_org_name,keyword
-author_user_name,keyword
-author_uuid,keyword
-creation_date,date
-iscreated,long
-isrevision,long
-metadata__timestamp,date
-metadata__updated_on,date
-origin,keyword
-page_last_edited_date,date
-page_metadata__timestamp,date
-page_metadata__updated_on,date
-page_origin,keyword
-page_pageid,long
-page_title,keyword
-repository_labels,keyword
-revision_comment,keyword
-revision_parentid,long
-revision_revid,long
-revision_timestamp,date
-revision_user,keyword
-tag,keyword
-title_analyzed,text
-url,keyword
-uuid,keyword
+name,type,aggregatable,description,raw / calculated
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+creation_date,date,true,Creation date.,Data Source / Parsed
+iscreated,long,true,Iscreated.,Data Source / Parsed
+isrevision,long,true,Isrevision.,Data Source / Parsed
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+page_last_edited_date,date,true,Page last edited date.,Data Source / Parsed
+page_metadata__timestamp,date,true,Page metadata timestamp.,Data Source / Parsed
+page_metadata__updated_on,date,true,Page metadata updated on.,Data Source / Parsed
+page_origin,keyword,true,Page origin.,Data Source / Parsed
+page_pageid,long,true,Page pageid.,Data Source / Parsed
+page_title,keyword,true,Page title.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+revision_comment,keyword,true,Revision comment.,Data Source / Parsed
+revision_parentid,long,true,Revision parentid.,Data Source / Parsed
+revision_revid,long,true,Revision revid.,Data Source / Parsed
+revision_timestamp,date,true,Revision timestamp.,Data Source / Parsed
+revision_user,keyword,true,Revision user.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+title_analyzed,text,false,Title analyzed.,Data Source / Parsed
+url,keyword,true,Url.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed

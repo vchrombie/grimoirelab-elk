@@ -1,5 +1,5 @@
-name,type,aggregatable,description,Raw / Calculated
-<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv.",
+name,type,aggregatable,description,raw / calculated
+<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv.",Data Source / Parsed
 assignee_data_bot,boolean,TRUE,True/False if the assignee is a bot or not.,GrimoireLab / SortingHat
 assignee_data_domain,keyword,TRUE,Assignee's domain name from SortingHat profile.,GrimoireLab / SortingHat
 assignee_data_id,keyword,TRUE,Assignee's id from SortingHat profile.,GrimoireLab / SortingHat

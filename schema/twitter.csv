@@ -1,62 +1,62 @@
-name,type,aggregatable,description
-author_bot,boolean,true,"True if the given author is identified as a bot."
-author_domain,keyword,true,"Domain associated to the author in SortingHat profile."
-author_gender,keyword,true,"Author gender."
-author_gender_acc,keyword,true,"Accuracy to assess author gender."
-author_id,keyword,true,"Author Id from SortingHat."
-author_name,keyword,true,"Author name."
-author_org_name,keyword,true,"Author organization name from SortingHat profile."
-author_user_name,keyword,true,"Author username from Sortinghat profile."
-author_uuid,keyword,true,"Author UUID from SortingHat."
-created_at,date,true,"Date when tweet was created."
-geolocation,geo_point,true,N\A
-grimoire_creation_date,date,true,"Message creation date"
-hashtags_analyzed,keyword,true,"Text of hashtag."
-id,long,true,"Unique identifier of the tweet."
-id_str, keyword,true,"Unique identifier of tweet in string format."
-in_reply_to_screen_name,keyword,true,"Screen name of original tweet author in case tweet is a reply."
-in_reply_to_user_id_str,keyword,true,"ID of parent Tweet's author in case tweet is a reply."
-is_twitter_tweet,long,true,"Count number of tweets in complex aggregations."
-metadata__enriched_on,date,true,"Date when the item was enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich information."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich information."
-metadata__timestamp,date,true,"Date when the item was stored in RAW index."
-metadata__updated_on,date,true,"Date when the item was updated on its original data source."
-origin,keyword,true,"Original URL where tweet was retrieved from."
-place.bounding_box.coordinates,long,true,"A series of longitude and latitude points, defining a box which will contain the Place entity this bounding box is related to"
-place.bounding_box.type,keyword,true,"A box of coordinates"
-place.country,keyword,true,"Name of the country containing this place"
-place.country_code,keyword,true,"Shortened country code representing the country containing this place."
-place.full_name,keyword,true,"Full human-readable representation of the place’s name."
-place.id,keyword,true,"ID representing this place"
-place.name,keyword,true,"Short human-readable representation of the place’s name."
-place.place_type,keyword,true,"The type of location represented by this place"
-place.url,keyword,true,"URL representing the location of additional place metadata for this place."
-project,keyword,true,"Project name."
-project_1,keyword,true,"Project (if more than one level is allowed in project hierarchy)."
-retweet_count,long,true,"Number of times tweet has been retweeted."
-retweeted,long,true,"Indicates whether this Tweet has been Retweeted by the authenticating user."
-tag,keyword,true,"Tag set by perceval when retrieving item."
-text,keyword,true,"Message text."
-text_analyzed,keyword,false,"Message body in plain text."
-url,keyword,true,"Url"
-user_bot,boolean,true,"True if the given user is identified as a bot."
-user_created_at,date,true,"UTC datatime when account was create."
-user_description,keyword,true,"String describing user account."
-user_domain,keyword,true,"Domain associated to the assignee in SortingHat profile."
-user_followers_count,long,true,"Number of followers account currently has."
-user_friends_count,long,true,"Number of followers count currently has."
-user_gender,keyword,true,"Assignee gender, based on her name (disabled by default)."
-user_gender_acc,long,true,"Assignee gender accuracy (disabled by default)."
-user_id,keyword,true,"Assignee Id from SortingHat."
-user_id_str,keyword,true,"Unique identifier for user."
-user_lang,keyword,true,"User language."
-user_location,keyword,true,"User-defined location of account profile."
-user_name,keyword,true,"User's name from SortingHat profile"
-user_org_name,keyword,true,"User's organization name from SortingHat profile."
-user_url,keyword,true,"URL associated with user profile."
-user_url_twitter,keyword,true,"Twitter user url."
-user_user_name,keyword,true,"User's username from SortingHat profile."
-user_uuid,keyword,true,"User's UUID from SortingHat profile."
-user_verified,boolean,true,"Indicates whether user account is verified."
-uuid,keyword,true,"Perceval UUID."
+name,type,aggregatable,description,raw / calculated
+author_bot,boolean,true,True if the given author is identified as a bot.,GrimoireLab / SortingHat
+author_domain,keyword,true,Domain associated to the author in SortingHat profile.,GrimoireLab / SortingHat
+author_gender,keyword,true,Author gender.,GrimoireLab / SortingHat
+author_gender_acc,keyword,true,Accuracy to assess author gender.,GrimoireLab / SortingHat
+author_id,keyword,true,Author Id from SortingHat.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author organization name from SortingHat profile.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author username from Sortinghat profile.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author UUID from SortingHat.,GrimoireLab / SortingHat
+created_at,date,true,Date when tweet was created.,Data Source / Parsed
+geolocation,geo_point,true,N\A,Data Source / Parsed
+grimoire_creation_date,date,true,Message creation date,GrimoireLab
+hashtags_analyzed,keyword,true,Text of hashtag.,Data Source / Parsed
+id,long,true,Unique identifier of the tweet.,Data Source / Parsed
+id_str, keyword,true,Unique identifier of tweet in string format.,Data Source / Parsed
+in_reply_to_screen_name,keyword,true,Screen name of original tweet author in case tweet is a reply.,Data Source / Parsed
+in_reply_to_user_id_str,keyword,true,ID of parent Tweet's author in case tweet is a reply.,Data Source / Parsed
+is_twitter_tweet,long,true,Count number of tweets in complex aggregations.,GrimoireLab
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated on its original data source.,GrimoireLab
+origin,keyword,true,Original URL where tweet was retrieved from.,Data Source / Parsed
+place.bounding_box.coordinates,long,true,"A series of longitude and latitude points, defining a box which will contain the Place entity this bounding box is related to",Data Source / Parsed
+place.bounding_box.type,keyword,true,A box of coordinates,Data Source / Parsed
+place.country,keyword,true,Name of the country containing this place,Data Source / Parsed
+place.country_code,keyword,true,Shortened country code representing the country containing this place.,Data Source / Parsed
+place.full_name,keyword,true,Full human-readable representation of the place’s name.,Data Source / Parsed
+place.id,keyword,true,ID representing this place,Data Source / Parsed
+place.name,keyword,true,Short human-readable representation of the place’s name.,Data Source / Parsed
+place.place_type,keyword,true,The type of location represented by this place,Data Source / Parsed
+place.url,keyword,true,URL representing the location of additional place metadata for this place.,Data Source / Parsed
+project,keyword,true,Project name.,GrimoireLab / projects.json
+project_1,keyword,true,Project (if more than one level is allowed in project hierarchy).,GrimoireLab / projects.json
+retweet_count,long,true,Number of times tweet has been retweeted.,Data Source / Parsed
+retweeted,long,true,Indicates whether this Tweet has been Retweeted by the authenticating user.,Data Source / Parsed
+tag,keyword,true,Tag set by perceval when retrieving item.,Data Source / Parsed
+text,keyword,true,Message text.,Data Source / Parsed
+text_analyzed,keyword,false,Message body in plain text.,Data Source / Parsed
+url,keyword,true,Url,Data Source / Parsed
+user_bot,boolean,true,True if the given user is identified as a bot.,GrimoireLab / SortingHat
+user_created_at,date,true,UTC datatime when account was create.,GrimoireLab / SortingHat
+user_description,keyword,true,String describing user account.,GrimoireLab / SortingHat
+user_domain,keyword,true,Domain associated to the assignee in SortingHat profile.,GrimoireLab / SortingHat
+user_followers_count,long,true,Number of followers account currently has.,GrimoireLab / SortingHat
+user_friends_count,long,true,Number of followers count currently has.,GrimoireLab / SortingHat
+user_gender,keyword,true,"Assignee gender, based on her name (disabled by default).",GrimoireLab / SortingHat
+user_gender_acc,long,true,Assignee gender accuracy (disabled by default).,GrimoireLab / SortingHat
+user_id,keyword,true,Assignee Id from SortingHat.,GrimoireLab / SortingHat
+user_id_str,keyword,true,Unique identifier for user.,GrimoireLab / SortingHat
+user_lang,keyword,true,User language.,GrimoireLab / SortingHat
+user_location,keyword,true,User-defined location of account profile.,GrimoireLab / SortingHat
+user_name,keyword,true,User's name from SortingHat profile,GrimoireLab / SortingHat
+user_org_name,keyword,true,User's organization name from SortingHat profile.,GrimoireLab / SortingHat
+user_url,keyword,true,URL associated with user profile.,GrimoireLab / SortingHat
+user_url_twitter,keyword,true,Twitter user url.,GrimoireLab / SortingHat
+user_user_name,keyword,true,User's username from SortingHat profile.,GrimoireLab / SortingHat
+user_uuid,keyword,true,User's UUID from SortingHat profile.,GrimoireLab / SortingHat
+user_verified,boolean,true,Indicates whether user account is verified.,GrimoireLab / SortingHat
+uuid,keyword,true,Perceval UUID.,Data Source / Parsed

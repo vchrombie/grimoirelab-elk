@@ -18,7 +18,7 @@ From_org_name,keyword,true,From org name.,GrimoireLab / SortingHat
 From_uuid,keyword,true,From uuid.,GrimoireLab / SortingHat
 grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
 is_mbox_message,long,true,Is mbox message.,GrimoireLab
-is_pipermail_message,long,true,Is pipermail message.,GrimoireLab
+is_groupsio_message,long,true,Is groupsio message.,GrimoireLab
 list,keyword,true,List.,Data Source / Parsed
 Message-ID,keyword,true,Message-id.,Data Source / Parsed
 metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab

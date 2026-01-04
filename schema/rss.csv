@@ -1,25 +1,25 @@
-name,type
-author_bot,boolean
-author_id,keyword
-author,keyword
-author_name,keyword
-author_org_name,keyword
-author_user_name,keyword
-author_uuid,keyword
-grimoire_creation_date,date
-is_rss_entry,long
-link,keyword
-metadata__enriched_on,date
-metadata__gelk_backend_name,keyword
-metadata__gelk_version,keyword
-metadata__timestamp,date
-metadata__updated_on,date
-origin,keyword
-publish_date,date
-published,keyword
-repository_labels,keyword
-summary_analyzed,text
-summary,keyword
-tag,keyword
-title,keyword
-uuid,keyword
+name,type,aggregatable,description,raw / calculated
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author,keyword,true,Author.,Data Source / Parsed
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+is_rss_entry,long,true,Is rss entry.,GrimoireLab
+link,keyword,true,Link.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+publish_date,date,true,Publish date.,Data Source / Parsed
+published,keyword,true,Published.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+summary_analyzed,text,false,Summary analyzed.,Data Source / Parsed
+summary,keyword,true,Summary.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+title,keyword,true,Title.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed

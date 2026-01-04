@@ -1,42 +1,42 @@
-name,type
-author_bot,boolean
-author_domain,keyword
-author_id,keyword
-author_name,keyword
-author_org_name,keyword
-author_user_name,keyword
-author_uuid,keyword
-branch,keyword
-closed,date
-domain,keyword
-githash,keyword
-grimoire_creation_date,date
-is_gerrit_review,long
-metadata__enriched_on,date
-metadata__gelk_backend_name,keyword
-metadata__gelk_version,keyword
-metadata__timestamp,date
-metadata__updated_on,date
-name,keyword
-number,keyword
-ocean-unique-id,keyword
-opened,date
-origin,keyword
-owner_bot,boolean
-owner_domain,keyword
-owner_id,keyword
-owner_name,keyword
-owner_org_name,keyword
-owner_user_name,keyword
-owner_uuid,keyword
-patchsets,long
-project_1,keyword
-project,keyword
-repository,keyword
-status,keyword
-summary_analyzed,text
-summary,keyword
-tag,keyword
-timeopen,double
-url,keyword
-uuid,keyword
+name,type,aggregatable,description,raw / calculated
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_domain,keyword,true,Author domain.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+branch,keyword,true,Branch.,Data Source / Parsed
+closed,date,true,Closed.,Data Source / Parsed
+domain,keyword,true,Domain.,Data Source / Parsed
+githash,keyword,true,Githash.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+is_gerrit_review,long,true,Is gerrit review.,GrimoireLab
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+name,keyword,true,Name.,Data Source / Parsed
+number,keyword,true,Number.,Data Source / Parsed
+ocean-unique-id,keyword,true,Ocean-unique-id.,Data Source / Parsed
+opened,date,true,Opened.,Data Source / Parsed
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+owner_bot,boolean,true,Owner bot.,GrimoireLab / SortingHat
+owner_domain,keyword,true,Owner domain.,GrimoireLab / SortingHat
+owner_id,keyword,true,Owner id.,GrimoireLab / SortingHat
+owner_name,keyword,true,Owner name.,GrimoireLab / SortingHat
+owner_org_name,keyword,true,Owner org name.,GrimoireLab / SortingHat
+owner_user_name,keyword,true,Owner user name.,GrimoireLab / SortingHat
+owner_uuid,keyword,true,Owner uuid.,GrimoireLab / SortingHat
+patchsets,long,true,Patchsets.,Data Source / Parsed
+project_1,keyword,true,Project (if more than one level is allowed in project hierarchy).,GrimoireLab / projects.json
+project,keyword,true,Project assigned to the item.,GrimoireLab / projects.json
+repository,keyword,true,Repository.,Data Source / Parsed
+status,keyword,true,Status.,Data Source / Parsed
+summary_analyzed,text,false,Summary analyzed.,Data Source / Parsed
+summary,keyword,true,Summary.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+timeopen,double,true,Timeopen.,Data Source / Parsed
+url,keyword,true,Url.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed

@@ -1,69 +1,69 @@
-name,type,aggregatable,description
-author_bot,boolean,true,"True if the given author is identified as a bot."
-author_domain,keyword,true,"Domain associated to the author in SortingHat profile."
-author_gender,keyword,true,"Message author gender."
-author_gender_acc,long,true,"Accuracy of the message author gender."
-author_id,keyword,true,"Author Id from SortingHat."
-author_name,keyword,true,"Author name."
-author_org_name,keyword,true,"Organization name."
-author_user_name,keyword,true,"Author username from SortingHat."
-author_uuid,keyword,true,"Author UUID from SortingHat."
-channel_created,date,true,"Date when the channel was created."
-channel_delete_at,date,true,"Date when the channel was deleted."
-channel_id,keyword,true,"ID of the channel."
-channel_message_count,number,true,"Number of messages."
-channel_name,keyword,true,"Name of the channel."
-channel_team_id,keyword,true,"ID of the channel team."
-channel_update_at,date,true,"Date when the channel was updated."
-demography_max_date,date,true,"Date of the latest message of the corresponding author. Available only when demography study is active."
-demography_min_date,date,true,"Date of the first (oldest) message of the corresponding author. Available only when demography study is active."
-file_count,number,true,"Number of files."
-files.file_create_at,date,true,"Date when the file was created."
-files.file_extension,keyword,true,"File extension."
-files.file_mini_preview,keyword,true,"File mini preview."
-files.file_name,keyword,true,"File name."
-files.file_post_id,keyword,true,"File post ID."
-files.file_size,number,true,"File size."
-files.file_type,keyword,true,"File type."
-files.file_update_at,date,true,"Date when the file was updated."
-files.file_user_id,keyword,true,"File user ID."
-grimoire_creation_date,date,true,"Date when the message was updated."
-hashtags,keyword,true,"Hashtags."
-is_mattermost_message,long,true,"Field containing '1' that allows to sum fields when concatenating with other indexes."
-is_pinned,number,true,"1 if the message is pinned or 0 in other case."
-is_reply,number,true,"1 if the message is a reply or 0 in other case."
-message,keyword,true,"Message."
-message_analyzed,keyword,true,"Content message split by terms to allow searching."
-message_id,keyword,true,"Message ID."
-metadata__enriched_on,date,true,"Date when the item was enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich information."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich information."
-metadata__timestamp,date,true,"Date when the item was stored in RAW index."
-metadata__updated_on,date,true,"Date when the item was updated in its original data source."
-origin,keyword,true,"Original URL where the repository was retrieved from."
-parent_id,keyword,true,"Parent message ID."
-position,keyword,true,"User position."
-project,keyword,true,"Project."
-project_1,keyword,true,"Project (if more than one level is allowed in project hierarchy)."
-reaction_count,long,true,"Number of reactions."
+name,type,aggregatable,description,raw / calculated
+author_bot,boolean,true,True if the given author is identified as a bot.,GrimoireLab / SortingHat
+author_domain,keyword,true,Domain associated to the author in SortingHat profile.,GrimoireLab / SortingHat
+author_gender,keyword,true,Message author gender.,GrimoireLab / SortingHat
+author_gender_acc,long,true,Accuracy of the message author gender.,GrimoireLab / SortingHat
+author_id,keyword,true,Author Id from SortingHat.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Organization name.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author username from SortingHat.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author UUID from SortingHat.,GrimoireLab / SortingHat
+channel_created,date,true,Date when the channel was created.,Data Source / Parsed
+channel_delete_at,date,true,Date when the channel was deleted.,Data Source / Parsed
+channel_id,keyword,true,ID of the channel.,Data Source / Parsed
+channel_message_count,number,true,Number of messages.,Data Source / Parsed
+channel_name,keyword,true,Name of the channel.,Data Source / Parsed
+channel_team_id,keyword,true,ID of the channel team.,Data Source / Parsed
+channel_update_at,date,true,Date when the channel was updated.,Data Source / Parsed
+demography_max_date,date,true,Date of the latest message of the corresponding author. Available only when demography study is active.,Data Source / Parsed
+demography_min_date,date,true,Date of the first (oldest) message of the corresponding author. Available only when demography study is active.,Data Source / Parsed
+file_count,number,true,Number of files.,Data Source / Parsed
+files.file_create_at,date,true,Date when the file was created.,Data Source / Parsed
+files.file_extension,keyword,true,File extension.,Data Source / Parsed
+files.file_mini_preview,keyword,true,File mini preview.,Data Source / Parsed
+files.file_name,keyword,true,File name.,Data Source / Parsed
+files.file_post_id,keyword,true,File post ID.,Data Source / Parsed
+files.file_size,number,true,File size.,Data Source / Parsed
+files.file_type,keyword,true,File type.,Data Source / Parsed
+files.file_update_at,date,true,Date when the file was updated.,Data Source / Parsed
+files.file_user_id,keyword,true,File user ID.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the message was updated.,GrimoireLab
+hashtags,keyword,true,Hashtags.,Data Source / Parsed
+is_mattermost_message,long,true,Field containing '1' that allows to sum fields when concatenating with other indexes.,GrimoireLab
+is_pinned,number,true,1 if the message is pinned or 0 in other case.,GrimoireLab
+is_reply,number,true,1 if the message is a reply or 0 in other case.,GrimoireLab
+message,keyword,true,Message.,Data Source / Parsed
+message_analyzed,keyword,true,Content message split by terms to allow searching.,Data Source / Parsed
+message_id,keyword,true,Message ID.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Original URL where the repository was retrieved from.,Data Source / Parsed
+parent_id,keyword,true,Parent message ID.,Data Source / Parsed
+position,keyword,true,User position.,Data Source / Parsed
+project,keyword,true,Project.,GrimoireLab / projects.json
+project_1,keyword,true,Project (if more than one level is allowed in project hierarchy).,GrimoireLab / projects.json
+reaction_count,long,true,Number of reactions.,Data Source / Parsed
 reactions.reaction_create_at,date,true,"Date when the reaction was created.
-reactions.reaction_emoji_name,keyword,true,"Name of the emoji."
-reactions.reaction_post_id,keyword,true,"Reaction post ID."
-reactions.reaction_update_at,date,true,"Date when the reaction was updated."
-reactions.reaction_user_id,keyword,true,"Reaction user ID."
-reply_count,number,true,"Number of replies."
-roles,keyword,true,"User roles."
-tag,keyword,true,"Perceval tag."
-type,keyword,true,"Message type."
-tz,long,true,"Timezone in which the message was made by its original author."
-user_data_bot,boolean,true,"True if the given user is identified as a bot."
-user_data_domain,keyword,true,"Domain associated to the user in SortingHat profile."
-user_data_gender,keyword,true,"Message user gender."
-user_data_gender_acc,keyword,true,"Accuracy of the user gender."
-user_data_id,keyword,true,"User Id from SortingHat."
-user_data_multi_org_names,keyword,true,"Multi organization names."
-user_data_name,keyword,true,"Name of the user."
-user_data_org_name,keyword,true,"Organization name."
-user_data_user_name,keyword,true,"Username of the user."
-user_data_uuid,keyword,true,"User UUID from SortingHat."
-uuid,keyword,true,"Perceval UUID."
+reactions.reaction_emoji_name,keyword,true,Name of the emoji.""",Data Source / Parsed
+reactions.reaction_post_id,keyword,true,Reaction post ID.,Data Source / Parsed
+reactions.reaction_update_at,date,true,Date when the reaction was updated.,Data Source / Parsed
+reactions.reaction_user_id,keyword,true,Reaction user ID.,Data Source / Parsed
+reply_count,number,true,Number of replies.,Data Source / Parsed
+roles,keyword,true,User roles.,Data Source / Parsed
+tag,keyword,true,Perceval tag.,Data Source / Parsed
+type,keyword,true,Message type.,Data Source / Parsed
+tz,long,true,Timezone in which the message was made by its original author.,Data Source / Parsed
+user_data_bot,boolean,true,True if the given user is identified as a bot.,GrimoireLab / SortingHat
+user_data_domain,keyword,true,Domain associated to the user in SortingHat profile.,GrimoireLab / SortingHat
+user_data_gender,keyword,true,Message user gender.,GrimoireLab / SortingHat
+user_data_gender_acc,keyword,true,Accuracy of the user gender.,GrimoireLab / SortingHat
+user_data_id,keyword,true,User Id from SortingHat.,GrimoireLab / SortingHat
+user_data_multi_org_names,keyword,true,Multi organization names.,GrimoireLab / SortingHat
+user_data_name,keyword,true,Name of the user.,GrimoireLab / SortingHat
+user_data_org_name,keyword,true,Organization name.,GrimoireLab / SortingHat
+user_data_user_name,keyword,true,Username of the user.,GrimoireLab / SortingHat
+user_data_uuid,keyword,true,User UUID from SortingHat.,GrimoireLab / SortingHat
+uuid,keyword,true,Perceval UUID.,Data Source / Parsed

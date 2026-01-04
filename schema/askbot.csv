@@ -1,53 +1,53 @@
-name,type,aggregatable,description
-answer_status,keyword,true,"Status of the answer (accepted/not_accepted)."
-author_askbot_id,keyword,true,"Author's Askbot id."
-author_askbot_user_name,keyword,true,"Author's Askbot username."
-author_badges,text,false,"Badges possessed by the author."
-author_bot,boolean,true,"True/False if the given author is a bot or not."
-author_domain,keyword,true,"Domain associated to the author in SortingHat profile."
-author_gender,keyword,true,"Author gender."
-author_gender_acc,long,true,"Accuracy to assess author gender."
-author_id,keyword,true,"Author Id from SortingHat."
-author_multi_org_names,keyword,true,"List of the author organizations from SortingHat profile."
-author_name,keyword,true,"Author name."
-author_org_name,keyword,true,"Author organization name."
-author_reputation,long,true,"Author reputation."
-author_url,keyword,true,"Author URL."
-author_user_name,keyword,true,"Author's username from SortingHat profile."
-author_uuid,keyword,true,"Author UUID from SortingHat."
-comment_count,long,true,"Number of comments."
-first_answer,long,true,"Field containing '1' if item is the first answer to question."
-grimoire_creation_date,date,true,"Date when the item was created."
-id,keyword,true,"Id of the item."
-is_accepted_answer,long,true,"Check if item is accepted answer."
-is_askbot_answer,long,true,"Used to separate answers from questions and comments."
-is_askbot_comment,long,true,"Used to separate comments from answers and questions."
-is_askbot_question,long,true,"Used to separate questions from answers and comments."
-metadata__enriched_on,date,true,"Date when the data was enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich the data."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich the data."
-metadata__timestamp,date,true,"Date when the item was stored in ElasticSearch raw index."
-metadata__updated_on,date,true,"Date when the item was updated on its original data source."
-origin,keyword,true,"The original URL from which the items were retrieved from."
-project,keyword,true,"Project."
-project_1,keyword,true,"Project (if more than one level is allowed in project hierarchy)."
-question_accepted_answer_id,long,true,"Id of accepted question."
-question_answer_count,long,true,"Count of answers to a question."
-question_answer_ids,long,true,"Ids of answers to a question."
-question_has_accepted_answer,long,true,"Check if question has an accepted answer."
-question_last_activity_at,date,true,"Date when the question was lastly answered."
-question_last_activity_by_id,long,true,"Id of the question was lastly answered."
-question_last_activity_by_username,keyword,true,"Username of author who answered the question lastly."
-question_tags,keyword,true,"Tags for questions."
-question_title,keyword,true,"Title of question."
-question_view_count,long,true,"Count of views for the question."
-repository_labels,keyword,true,"Custom repository labels defined by the user."
-score,long,true,"Score to an answer."
-summary,text,false,"Text summary of the item."
-tag,keyword,true,"Perceval tag."
-time_from_question,float,true,"Time taken from question."
-time_to_reply,float,true,"Time taken to reply."
-title,keyword,true,"Title of the item (question)."
-type,keyword,true,"Type of the item (answer, comment, question)."
-url,keyword,true,"URL to the item."
-uuid,keyword,true,"Perceval UUID."
+name,type,aggregatable,description,raw / calculated
+answer_status,keyword,true,Status of the answer (accepted/not_accepted).,Data Source / Parsed
+author_askbot_id,keyword,true,Author's Askbot id.,GrimoireLab / SortingHat
+author_askbot_user_name,keyword,true,Author's Askbot username.,GrimoireLab / SortingHat
+author_badges,text,false,Badges possessed by the author.,GrimoireLab / SortingHat
+author_bot,boolean,true,True/False if the given author is a bot or not.,GrimoireLab / SortingHat
+author_domain,keyword,true,Domain associated to the author in SortingHat profile.,GrimoireLab / SortingHat
+author_gender,keyword,true,Author gender.,GrimoireLab / SortingHat
+author_gender_acc,long,true,Accuracy to assess author gender.,GrimoireLab / SortingHat
+author_id,keyword,true,Author Id from SortingHat.,GrimoireLab / SortingHat
+author_multi_org_names,keyword,true,List of the author organizations from SortingHat profile.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author organization name.,GrimoireLab / SortingHat
+author_reputation,long,true,Author reputation.,GrimoireLab / SortingHat
+author_url,keyword,true,Author URL.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author's username from SortingHat profile.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author UUID from SortingHat.,GrimoireLab / SortingHat
+comment_count,long,true,Number of comments.,Data Source / Parsed
+first_answer,long,true,Field containing '1' if item is the first answer to question.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created.,GrimoireLab
+id,keyword,true,Id of the item.,Data Source / Parsed
+is_accepted_answer,long,true,Check if item is accepted answer.,GrimoireLab
+is_askbot_answer,long,true,Used to separate answers from questions and comments.,GrimoireLab
+is_askbot_comment,long,true,Used to separate comments from answers and questions.,GrimoireLab
+is_askbot_question,long,true,Used to separate questions from answers and comments.,GrimoireLab
+metadata__enriched_on,date,true,Date when the data was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich the data.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich the data.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in ElasticSearch raw index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated on its original data source.,GrimoireLab
+origin,keyword,true,The original URL from which the items were retrieved from.,Data Source / Parsed
+project,keyword,true,Project.,GrimoireLab / projects.json
+project_1,keyword,true,Project (if more than one level is allowed in project hierarchy).,GrimoireLab / projects.json
+question_accepted_answer_id,long,true,Id of accepted question.,Data Source / Parsed
+question_answer_count,long,true,Count of answers to a question.,Data Source / Parsed
+question_answer_ids,long,true,Ids of answers to a question.,Data Source / Parsed
+question_has_accepted_answer,long,true,Check if question has an accepted answer.,Data Source / Parsed
+question_last_activity_at,date,true,Date when the question was lastly answered.,Data Source / Parsed
+question_last_activity_by_id,long,true,Id of the question was lastly answered.,Data Source / Parsed
+question_last_activity_by_username,keyword,true,Username of author who answered the question lastly.,Data Source / Parsed
+question_tags,keyword,true,Tags for questions.,Data Source / Parsed
+question_title,keyword,true,Title of question.,Data Source / Parsed
+question_view_count,long,true,Count of views for the question.,Data Source / Parsed
+repository_labels,keyword,true,Custom repository labels defined by the user.,GrimoireLab / projects.json
+score,long,true,Score to an answer.,Data Source / Parsed
+summary,text,false,Text summary of the item.,Data Source / Parsed
+tag,keyword,true,Perceval tag.,Data Source / Parsed
+time_from_question,float,true,Time taken from question.,Data Source / Parsed
+time_to_reply,float,true,Time taken to reply.,Data Source / Parsed
+title,keyword,true,Title of the item (question).,Data Source / Parsed
+type,keyword,true,"Type of the item (answer, comment, question).",Data Source / Parsed
+url,keyword,true,URL to the item.,Data Source / Parsed
+uuid,keyword,true,Perceval UUID.,Data Source / Parsed

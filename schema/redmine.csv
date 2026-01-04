@@ -1,47 +1,47 @@
-name,type
-assigned_to_id,long
-assigned_to_name,keyword
-attachments,long
-author_bot,boolean
-author_domain,keyword
-author_id,keyword
-author_name,keyword
-author_org_name,keyword
-author_user_name,long
-author_uuid,keyword
-category_id,long
-category_name,keyword
-changesets,long
-closing_date,date
-creation_date,date
-description_analyzed,text
-description,keyword
-done_ratio,long
-fixed_version_id,long
-fixed_version_name,keyword
-grimoire_creation_date,date
-id,long
-is_redmine_job,long
-journals,long
-metadata__timestamp,date
-metadata__updated_on,date
-origin,keyword
-priority_id,long
-priority_name,keyword
-project_id,long
-project_name,keyword
-relations,long
-repository_labels,keyword
-spent_hours,float
-start_date,date
-status_id,long
-status_name,keyword
-subject,keyword
-tag,keyword
-timeopen_days,float
-timeworking_days,float
-tracker_id,long
-tracker_name,keyword
-updated_on,date
-url,keyword
-uuid,keyword
+name,type,aggregatable,description,raw / calculated
+assigned_to_id,long,true,Assigned to id.,GrimoireLab / SortingHat
+assigned_to_name,keyword,true,Assigned to name.,GrimoireLab / SortingHat
+attachments,long,true,Attachments.,Data Source / Parsed
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_domain,keyword,true,Author domain.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_user_name,long,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+category_id,long,true,Category id.,Data Source / Parsed
+category_name,keyword,true,Category name.,Data Source / Parsed
+changesets,long,true,Changesets.,Data Source / Parsed
+closing_date,date,true,Closing date.,Data Source / Parsed
+creation_date,date,true,Creation date.,Data Source / Parsed
+description_analyzed,text,false,Description analyzed.,Data Source / Parsed
+description,keyword,true,Description.,Data Source / Parsed
+done_ratio,long,true,Done ratio.,Data Source / Parsed
+fixed_version_id,long,true,Fixed version id.,Data Source / Parsed
+fixed_version_name,keyword,true,Fixed version name.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+id,long,true,Id.,Data Source / Parsed
+is_redmine_job,long,true,Is redmine job.,GrimoireLab
+journals,long,true,Journals.,Data Source / Parsed
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+priority_id,long,true,Priority id.,Data Source / Parsed
+priority_name,keyword,true,Priority name.,Data Source / Parsed
+project_id,long,true,Project id.,GrimoireLab / projects.json
+project_name,keyword,true,Project name.,GrimoireLab / projects.json
+relations,long,true,Relations.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+spent_hours,float,true,Spent hours.,Data Source / Parsed
+start_date,date,true,Start date.,Data Source / Parsed
+status_id,long,true,Status id.,Data Source / Parsed
+status_name,keyword,true,Status name.,Data Source / Parsed
+subject,keyword,true,Subject.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+timeopen_days,float,true,Timeopen days.,Data Source / Parsed
+timeworking_days,float,true,Timeworking days.,Data Source / Parsed
+tracker_id,long,true,Tracker id.,Data Source / Parsed
+tracker_name,keyword,true,Tracker name.,Data Source / Parsed
+updated_on,date,true,Updated on.,Data Source / Parsed
+url,keyword,true,Url.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed

@@ -1,74 +1,74 @@
-name,type,aggregatable
-author_bot,boolean,true
-author_id,keyword,true
-author_name,keyword,true
-author_org_name,keyword,true
-author_user_name,long,true
-author_uuid,keyword,true
-comment,keyword,true
-description_analyzed,text,false
-event_url,keyword,true
-grimoire_creation_date,date,true
-group_created,date,true
-group_geolocation,geo_point,true
-group_id,long,true
-group_join_mode,keyword,true
-group_members,long,true
-group_name,keyword,true
-group_topics_keys,keyword,true
-group_topics,keyword,true
-group_urlname,keyword,true
-group_who,keyword,true
-id,keyword,true
-is_meetup_comment,long,true
-is_meetup_meetup,long,true
-is_meetup_rsvp,long,true
-like_count,long,true
-meetup_created,long,true
-meetup_description,keyword,true
-meetup_duration,long,true
-meetup_featured,boolean,true
-meetup_name,keyword,true
-meetup_plain_text_description,keyword,false
-meetup_rsvpable,boolean,true
-meetup_status,keyword,true
-meetup_time,long,true
-meetup_updated,long,true
-meetup_utc_offset,long,true
-meetup_visibility,keyword,true
-meetup_waitlist_count,long,true
-meetup_yes_rsvp_count,long,true
-member_id,long,true
-member_is_host,boolean,true
-member_name,keyword,true
-member_photo_id,long,true
-member_photo_type,keyword,true
-member_photo_url,keyword,true
-member_url,keyword,true
-metadata__enriched_on,date,true
-metadata__gelk_backend_name,keyword,true
-metadata__gelk_version,keyword,true
-metadata__timestamp,date,true
-metadata__updated_on,date,true
-num_comments,long,true
-num_rsvps,long,true
-origin,keyword,true
-repository_labels,keyword,true
-rsvps_guests,long,true
-rsvps_response,keyword,true
-rsvps_updated,long,true
-tag,keyword,true
-time_date,date,true
-type,keyword,true
-url,keyword,true
-uuid,keyword,true
-venue_address_1,keyword,true
-venue_city,keyword,true
-venue_country,keyword,true
-venue_geolocation,geo_point,true
-venue_id,long,true
-venue_localized_country_name,keyword,true
-venue_name,keyword,true
-venue_repinned,boolean,true
-venue_state,keyword,true
-venue_zip,keyword,true
+name,type,aggregatable,description,raw / calculated
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_user_name,long,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+comment,keyword,true,Comment.,Data Source / Parsed
+description_analyzed,text,false,Description analyzed.,Data Source / Parsed
+event_url,keyword,true,Event url.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+group_created,date,true,Group created.,Data Source / Parsed
+group_geolocation,geo_point,true,Group geolocation.,Data Source / Parsed
+group_id,long,true,Group id.,Data Source / Parsed
+group_join_mode,keyword,true,Group join mode.,Data Source / Parsed
+group_members,long,true,Group members.,Data Source / Parsed
+group_name,keyword,true,Group name.,Data Source / Parsed
+group_topics_keys,keyword,true,Group topics keys.,Data Source / Parsed
+group_topics,keyword,true,Group topics.,Data Source / Parsed
+group_urlname,keyword,true,Group urlname.,Data Source / Parsed
+group_who,keyword,true,Group who.,Data Source / Parsed
+id,keyword,true,Id.,Data Source / Parsed
+is_meetup_comment,long,true,Is meetup comment.,GrimoireLab
+is_meetup_meetup,long,true,Is meetup meetup.,GrimoireLab
+is_meetup_rsvp,long,true,Is meetup rsvp.,GrimoireLab
+like_count,long,true,Like count.,Data Source / Parsed
+meetup_created,long,true,Meetup created.,Data Source / Parsed
+meetup_description,keyword,true,Meetup description.,Data Source / Parsed
+meetup_duration,long,true,Meetup duration.,Data Source / Parsed
+meetup_featured,boolean,true,Meetup featured.,Data Source / Parsed
+meetup_name,keyword,true,Meetup name.,Data Source / Parsed
+meetup_plain_text_description,keyword,false,Meetup plain text description.,Data Source / Parsed
+meetup_rsvpable,boolean,true,Meetup rsvpable.,Data Source / Parsed
+meetup_status,keyword,true,Meetup status.,Data Source / Parsed
+meetup_time,long,true,Meetup time.,Data Source / Parsed
+meetup_updated,long,true,Meetup updated.,Data Source / Parsed
+meetup_utc_offset,long,true,Meetup utc offset.,Data Source / Parsed
+meetup_visibility,keyword,true,Meetup visibility.,Data Source / Parsed
+meetup_waitlist_count,long,true,Meetup waitlist count.,Data Source / Parsed
+meetup_yes_rsvp_count,long,true,Meetup yes rsvp count.,Data Source / Parsed
+member_id,long,true,Member id.,Data Source / Parsed
+member_is_host,boolean,true,Member is host.,Data Source / Parsed
+member_name,keyword,true,Member name.,Data Source / Parsed
+member_photo_id,long,true,Member photo id.,Data Source / Parsed
+member_photo_type,keyword,true,Member photo type.,Data Source / Parsed
+member_photo_url,keyword,true,Member photo url.,Data Source / Parsed
+member_url,keyword,true,Member url.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+num_comments,long,true,Num comments.,Data Source / Parsed
+num_rsvps,long,true,Num rsvps.,Data Source / Parsed
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+rsvps_guests,long,true,Rsvps guests.,Data Source / Parsed
+rsvps_response,keyword,true,Rsvps response.,Data Source / Parsed
+rsvps_updated,long,true,Rsvps updated.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+time_date,date,true,Time date.,Data Source / Parsed
+type,keyword,true,Type.,Data Source / Parsed
+url,keyword,true,Url.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed
+venue_address_1,keyword,true,Venue address 1.,Data Source / Parsed
+venue_city,keyword,true,Venue city.,Data Source / Parsed
+venue_country,keyword,true,Venue country.,Data Source / Parsed
+venue_geolocation,geo_point,true,Venue geolocation.,Data Source / Parsed
+venue_id,long,true,Venue id.,Data Source / Parsed
+venue_localized_country_name,keyword,true,Venue localized country name.,Data Source / Parsed
+venue_name,keyword,true,Venue name.,Data Source / Parsed
+venue_repinned,boolean,true,Venue repinned.,Data Source / Parsed
+venue_state,keyword,true,Venue state.,Data Source / Parsed
+venue_zip,keyword,true,Venue zip.,Data Source / Parsed

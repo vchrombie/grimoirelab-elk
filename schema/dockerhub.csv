@@ -1,26 +1,26 @@
-name,type,aggregatable,description
-description,text,false,"Description of the DockerHub repository."
-description_analyzed,text,false,"Analyzed description of the DockerHub repository."
-full_description_analyzed,text,false,"Analyzed full description of the DockerHub repository."
-grimoire_creation_date,date,true,"Date when the repo was fetched."
-id,keyword,true,"Id of the DockerHub repository"
-is_automated,boolean,true,"True/False if updating repository is automated or not."
-is_docker_image,long,true,"Field containing '1' only if the item is a docker image."
-is_dockerhub_dockerhub,long,true,"Field containing '1' only if the item is downloaded from DockerHub."
-is_event,long,true,"Field containing '1' only if the fetching item is an event."
-is_private,boolean,true,"True/False if the repository is private or not."
-last_updated,date,true,"Date when the changeset was last updated."
-metadata__enriched_on,date,true,"Date when the item was enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich information."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich information."
-metadata__timestamp,date,true,"Date when the item was stored in RAW index."
-metadata__updated_on,date,true,"Date when the item was updated in its original data source."
-origin,keyword,true,"Original URL where the repository was retrieved from."
-pull_count,long,true,"Number of pulls of the repository."
-repository_labels,keyword,true,"Custom repository labels defined by the user."
-repository_type,keyword,true,"Repository type (image)."
-star_count,long,true,"Number of stars of the repository"
-status,long,true,"DockerHub Build status."
-tag,keyword,true,"Perceval tag."
-user,keyword,true,"DockerHub user."
-uuid,keyword,true,"Perceval UUID."
+name,type,aggregatable,description,raw / calculated
+description,text,false,Description of the DockerHub repository.,Data Source / Parsed
+description_analyzed,text,false,Analyzed description of the DockerHub repository.,Data Source / Parsed
+full_description_analyzed,text,false,Analyzed full description of the DockerHub repository.,Data Source / Parsed
+grimoire_creation_date,date,true,Date when the repo was fetched.,GrimoireLab
+id,keyword,true,Id of the DockerHub repository,Data Source / Parsed
+is_automated,boolean,true,True/False if updating repository is automated or not.,GrimoireLab
+is_docker_image,long,true,Field containing '1' only if the item is a docker image.,GrimoireLab
+is_dockerhub_dockerhub,long,true,Field containing '1' only if the item is downloaded from DockerHub.,GrimoireLab
+is_event,long,true,Field containing '1' only if the fetching item is an event.,GrimoireLab
+is_private,boolean,true,True/False if the repository is private or not.,GrimoireLab
+last_updated,date,true,Date when the changeset was last updated.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Original URL where the repository was retrieved from.,Data Source / Parsed
+pull_count,long,true,Number of pulls of the repository.,Data Source / Parsed
+repository_labels,keyword,true,Custom repository labels defined by the user.,GrimoireLab / projects.json
+repository_type,keyword,true,Repository type (image).,Data Source / Parsed
+star_count,long,true,Number of stars of the repository,Data Source / Parsed
+status,long,true,DockerHub Build status.,Data Source / Parsed
+tag,keyword,true,Perceval tag.,Data Source / Parsed
+user,keyword,true,DockerHub user.,Data Source / Parsed
+uuid,keyword,true,Perceval UUID.,Data Source / Parsed

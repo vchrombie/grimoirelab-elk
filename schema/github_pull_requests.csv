@@ -1,5 +1,5 @@
-name,type,aggregatable,description,Raw / Calculated
-<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv.",
+name,type,aggregatable,description,raw / calculated
+<Cross-references fields>,NA,NA,"Fields coming from cross references study (available only when it is active), see cross_references.csv.",Data Source / Parsed
 additions,long,TRUE,Number of additions in the Pull Request.,GrimoireLab
 assignee_geolocation,geo_point,TRUE,Pull Request assignee geolocation from GitHub.,Data Source / Parsed
 author_bot,boolean,TRUE,True/False if the Pull Request author is a bot or not from SortingHat profile.,GrimoireLab / SortingHat

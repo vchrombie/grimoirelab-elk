@@ -3,7 +3,7 @@ answer_status,keyword,true,Answer status.,Data Source / Parsed
 answer_count,long,true,Answer count.,Data Source / Parsed
 answer_id,long,true,Answer id.,Data Source / Parsed
 answer_tags,keyword,true,Answer tags.,Data Source / Parsed
-answers_tags, keyword,true,Answers tags.,Data Source / Parsed
+answers_tags,keyword,true,Answers tags.,Data Source / Parsed
 author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
 author_id,keyword,true,Author id.,GrimoireLab / SortingHat
 author,keyword,true,Author.,Data Source / Parsed
@@ -47,7 +47,7 @@ repository_labels,keyword,true,Labels attached to the repository from projects.j
 score,long,true,Score.,Data Source / Parsed
 tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
 tags,keyword,true,Tags.,Data Source / Parsed
-thread_tags, keyword,true,Thread tags.,Data Source / Parsed
+thread_tags,keyword,true,Thread tags.,Data Source / Parsed
 title_analyzed,text,false,Title analyzed.,Data Source / Parsed
 title,keyword,true,Title.,Data Source / Parsed
 type,keyword,true,Type.,Data Source / Parsed

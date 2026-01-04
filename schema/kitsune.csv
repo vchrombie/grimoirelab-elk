@@ -1,58 +1,58 @@
-name,type,aggregatable,description
-answer_id,long,True,"Unique identifier for the answer."
-author,keyword,True,"Name of the author."
-author_bot,boolean,True,"Indicates whether the author is a bot."
-author_gender,keyword,True,"Gender of the author."
-author_gender_acc,long,True,"Accuracy or confidence level for the author's gender identification."
-author_id,keyword,True,"Unique identifier for the author."
-author_multi_org_names,keyword,True,"List of multiple organization names associated with the author."
-author_name,keyword,True,"Full name of the author."
-author_org_name,keyword,True,"Organization name associated with the author."
-author_user_name,keyword,True,"Username of the author."
-author_uuid,keyword,True,"Unique UUID for the author."
-content,keyword,True,"Content of the post or answer as a single string."
-content_analyzed,text,False,"Content of the post or answer, analyzed for searching."
-creation_date,date,True,"Date when the content was created."
-creator_bot,boolean,True,"Indicates whether the creator is a bot."
-creator_gender,keyword,True,"Gender of the creator."
-creator_gender_acc,long,True,"Accuracy or confidence level for the creator's gender identification."
-creator_id,keyword,True,"Unique identifier for the creator."
-creator_multi_org_names,keyword,True,"List of multiple organization names associated with the creator."
-creator_name,keyword,True,"Full name of the creator."
-creator_org_name,keyword,True,"Organization name associated with the creator."
-creator_user_name,keyword,True,"Username of the creator."
-creator_uuid,keyword,True,"Unique UUID for the creator."
-grimoire_creation_date,date,True,"Date when the item was created upstream, typically the date the question or answer was created."
-helpful_answer,long,True,"Field indicating whether the answer was marked as helpful."
-id,keyword,True,"Unique identifier for the entity (question or answer)."
-is_kitsune_answer,long,True,"Field containing '1' if the item is a Kitsune answer."
-is_kitsune_question,long,True,"Field containing '1' if the item is a Kitsune question."
-is_kitsune_question_solved,long,True,"Field containing '1' if the Kitsune question is marked as solved."
-is_spam,boolean,True,"Field indicating whether the content is flagged as spam."
-last_activity_date,date,True,"Date when the last activity occurred on the item (question or answer)."
-lifetime_days,float,False,"The total lifetime of the question or answer in days."
-locale,keyword,True,"Locale or language in which the content was written."
-metadata__enriched_on,date,True,"Date when the item was enriched."
-metadata__gelk_backend_name,keyword,True,"Name of the backend used to enrich information."
-metadata__gelk_version,keyword,True,"Version of the backend used to enrich information."
-metadata__timestamp,date,True,"Timestamp when the item was indexed."
-metadata__updated_on,date,True,"Date when the item was updated in its original data source."
-num_answers,long,True,"Number of answers associated with the question."
-offset,long,True,"Offset of the document in the data source."
-origin,keyword,True,"Original URL where the data was retrieved from."
-product,keyword,True,"Product associated with the question or answer."
-project,keyword,True,"Project name associated with the question or answer."
-project_1,keyword,True,"Additional project information if multiple project levels exist."
-question_id,long,True,"Unique identifier for the question."
-score,long,True,"Score or rating given to the question or answer."
-solution,long,True,"Field indicating whether the answer is marked as a solution."
-status,keyword,True,"Status of the question or answer (open, archived, locked, solved)."
-tag,keyword,True,"Tag associated with the origin."
-tags,keyword,True,"List of tags associated with the question or answer."
-tags_analyzed,text,False,"Tags analyzed for searching."
-time_to_first_reply_hours,float,False,"Time taken to receive the first reply, measured in hours."
-title,keyword,True,"Title of the question or answer."
-type,keyword,True,"Type of content (e.g., question, answer)."
-unhelpful_answer,long,True,"Field indicating whether the answer was marked as unhelpful."
-url,keyword,True,"URL corresponding to the question or answer."
-uuid,keyword,True,"Unique identifier (UUID) for the entity."
+name,type,aggregatable,description,raw / calculated
+answer_id,long,True,Unique identifier for the answer.,Data Source / Parsed
+author,keyword,True,Name of the author.,Data Source / Parsed
+author_bot,boolean,True,Indicates whether the author is a bot.,GrimoireLab / SortingHat
+author_gender,keyword,True,Gender of the author.,GrimoireLab / SortingHat
+author_gender_acc,long,True,Accuracy or confidence level for the author's gender identification.,GrimoireLab / SortingHat
+author_id,keyword,True,Unique identifier for the author.,GrimoireLab / SortingHat
+author_multi_org_names,keyword,True,List of multiple organization names associated with the author.,GrimoireLab / SortingHat
+author_name,keyword,True,Full name of the author.,GrimoireLab / SortingHat
+author_org_name,keyword,True,Organization name associated with the author.,GrimoireLab / SortingHat
+author_user_name,keyword,True,Username of the author.,GrimoireLab / SortingHat
+author_uuid,keyword,True,Unique UUID for the author.,GrimoireLab / SortingHat
+content,keyword,True,Content of the post or answer as a single string.,Data Source / Parsed
+content_analyzed,text,False,"Content of the post or answer, analyzed for searching.",Data Source / Parsed
+creation_date,date,True,Date when the content was created.,Data Source / Parsed
+creator_bot,boolean,True,Indicates whether the creator is a bot.,GrimoireLab / SortingHat
+creator_gender,keyword,True,Gender of the creator.,Data Source / Parsed
+creator_gender_acc,long,True,Accuracy or confidence level for the creator's gender identification.,Data Source / Parsed
+creator_id,keyword,True,Unique identifier for the creator.,Data Source / Parsed
+creator_multi_org_names,keyword,True,List of multiple organization names associated with the creator.,GrimoireLab / SortingHat
+creator_name,keyword,True,Full name of the creator.,Data Source / Parsed
+creator_org_name,keyword,True,Organization name associated with the creator.,GrimoireLab / SortingHat
+creator_user_name,keyword,True,Username of the creator.,Data Source / Parsed
+creator_uuid,keyword,True,Unique UUID for the creator.,GrimoireLab / SortingHat
+grimoire_creation_date,date,True,"Date when the item was created upstream, typically the date the question or answer was created.",GrimoireLab
+helpful_answer,long,True,Field indicating whether the answer was marked as helpful.,Data Source / Parsed
+id,keyword,True,Unique identifier for the entity (question or answer).,Data Source / Parsed
+is_kitsune_answer,long,True,Field containing '1' if the item is a Kitsune answer.,GrimoireLab
+is_kitsune_question,long,True,Field containing '1' if the item is a Kitsune question.,GrimoireLab
+is_kitsune_question_solved,long,True,Field containing '1' if the Kitsune question is marked as solved.,GrimoireLab
+is_spam,boolean,True,Field indicating whether the content is flagged as spam.,GrimoireLab
+last_activity_date,date,True,Date when the last activity occurred on the item (question or answer).,Data Source / Parsed
+lifetime_days,float,False,The total lifetime of the question or answer in days.,Data Source / Parsed
+locale,keyword,True,Locale or language in which the content was written.,Data Source / Parsed
+metadata__enriched_on,date,True,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,True,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,True,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,True,Timestamp when the item was indexed.,GrimoireLab
+metadata__updated_on,date,True,Date when the item was updated in its original data source.,GrimoireLab
+num_answers,long,True,Number of answers associated with the question.,Data Source / Parsed
+offset,long,True,Offset of the document in the data source.,Data Source / Parsed
+origin,keyword,True,Original URL where the data was retrieved from.,Data Source / Parsed
+product,keyword,True,Product associated with the question or answer.,Data Source / Parsed
+project,keyword,True,Project name associated with the question or answer.,GrimoireLab / projects.json
+project_1,keyword,True,Additional project information if multiple project levels exist.,GrimoireLab / projects.json
+question_id,long,True,Unique identifier for the question.,Data Source / Parsed
+score,long,True,Score or rating given to the question or answer.,Data Source / Parsed
+solution,long,True,Field indicating whether the answer is marked as a solution.,Data Source / Parsed
+status,keyword,True,"Status of the question or answer (open, archived, locked, solved).",Data Source / Parsed
+tag,keyword,True,Tag associated with the origin.,Data Source / Parsed
+tags,keyword,True,List of tags associated with the question or answer.,Data Source / Parsed
+tags_analyzed,text,False,Tags analyzed for searching.,Data Source / Parsed
+time_to_first_reply_hours,float,False,"Time taken to receive the first reply, measured in hours.",Data Source / Parsed
+title,keyword,True,Title of the question or answer.,Data Source / Parsed
+type,keyword,True,"Type of content (e.g., question, answer).",Data Source / Parsed
+unhelpful_answer,long,True,Field indicating whether the answer was marked as unhelpful.,Data Source / Parsed
+url,keyword,True,URL corresponding to the question or answer.,Data Source / Parsed
+uuid,keyword,True,Unique identifier (UUID) for the entity.,Data Source / Parsed

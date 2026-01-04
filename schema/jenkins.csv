@@ -1,33 +1,33 @@
-name,type,aggregatable,description
-branch,keyword,true,"Branch name."
-build_date,date,true,"Date of the given build."
-build,long,true,"Build number."
-builtOn,keyword,true,"Node name."
-category,keyword,true,"Category name."
-duration_days,float,true,"Duration in days."
-duration_min,float,true,"Duration in minutes."
-duration,long,true,"Duration in milliseconds."
-fullDisplayName_analyzed,text,false,"Job's full name analyzed for searching."
-fullDisplayName,keyword,true,"Job's full name as a single string for bucketizing if needed."
-grimoire_creation_date,date,true,"Date when item was created upstream, i.e. when the job was created."
-installer,keyword,true,"Installer name extracted from job's name (text before the first hyphen)."
-is_jenkins_job,long,true,"Field containing '1' that allows to sum fields when concatenating with other indexes."
-job_build,keyword,true,"Build's reference, includes job's name and number."
-job_name,keyword,true,"Job's name."
-job_url,keyword,true,"URL corresponding to the given job."
-loop,keyword,true,"Frequency of job's execution."
-metadata__enriched_on,date,true,"Date when the item was enriched."
-metadata__gelk_backend_name,keyword,true,"Name of the backend used to enrich information."
-metadata__gelk_version,keyword,true,"Version of the backend used to enrich information."
-metadata__timestamp,date,true,"Date when the item was stored in RAW index."
-metadata__updated_on,date,true,"Date when the item was updated in its original data source."
-origin,keyword,true,"Original URL where the data was retrieved from."
-pod,keyword,true,"Pod name."
-project_1,keyword,true,"Used if more than one project levels are allowed in the project hierarchy."
-project,keyword,true,"Project name."
-repository_labels,keyword,true,"Custom labels set in projects.json file to ease filtering."
-result,keyword,true,"String representing the result of the job, e.g. SUCCESS or FAILURE."
-tag,keyword,true,"Perceval tag."
-testproject,keyword,true,"Name of test project extracted from job name."
-url,keyword,true,"Build's URL"
-uuid,keyword,true,"Perceval UUID."
+name,type,aggregatable,description,raw / calculated
+branch,keyword,true,Branch name.,Data Source / Parsed
+build_date,date,true,Date of the given build.,Data Source / Parsed
+build,long,true,Build number.,Data Source / Parsed
+builtOn,keyword,true,Node name.,Data Source / Parsed
+category,keyword,true,Category name.,Data Source / Parsed
+duration_days,float,true,Duration in days.,Data Source / Parsed
+duration_min,float,true,Duration in minutes.,Data Source / Parsed
+duration,long,true,Duration in milliseconds.,Data Source / Parsed
+fullDisplayName_analyzed,text,false,Job's full name analyzed for searching.,Data Source / Parsed
+fullDisplayName,keyword,true,Job's full name as a single string for bucketizing if needed.,Data Source / Parsed
+grimoire_creation_date,date,true,"Date when item was created upstream, i.e. when the job was created.",GrimoireLab
+installer,keyword,true,Installer name extracted from job's name (text before the first hyphen).,Data Source / Parsed
+is_jenkins_job,long,true,Field containing '1' that allows to sum fields when concatenating with other indexes.,GrimoireLab
+job_build,keyword,true,"Build's reference, includes job's name and number.",Data Source / Parsed
+job_name,keyword,true,Job's name.,Data Source / Parsed
+job_url,keyword,true,URL corresponding to the given job.,Data Source / Parsed
+loop,keyword,true,Frequency of job's execution.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+origin,keyword,true,Original URL where the data was retrieved from.,Data Source / Parsed
+pod,keyword,true,Pod name.,Data Source / Parsed
+project_1,keyword,true,Used if more than one project levels are allowed in the project hierarchy.,GrimoireLab / projects.json
+project,keyword,true,Project name.,GrimoireLab / projects.json
+repository_labels,keyword,true,Custom labels set in projects.json file to ease filtering.,GrimoireLab / projects.json
+result,keyword,true,"String representing the result of the job, e.g. SUCCESS or FAILURE.",Data Source / Parsed
+tag,keyword,true,Perceval tag.,Data Source / Parsed
+testproject,keyword,true,Name of test project extracted from job name.,Data Source / Parsed
+url,keyword,true,Build's URL,Data Source / Parsed
+uuid,keyword,true,Perceval UUID.,Data Source / Parsed

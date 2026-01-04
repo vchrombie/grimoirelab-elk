@@ -1,78 +1,78 @@
-name,type
-author_type,keyword
-assignee_bot,boolean
-assignee_domain,keyword
-assignee_id,keyword
-assignee,keyword
-assignee_name,keyword
-assignee_org_name,keyword
-assignee_tz,keyword
-assignee_user_name,keyword
-assignee_uuid,keyword
-author_bot,boolean
-author_domain,keyword
-author_id,keyword
-author_login,keyword
-author_name,keyword
-author_org_name,keyword
-author_tz,keyword
-author_user_name,keyword
-author_uuid,keyword
-changes,long
-creation_date,date
-creator_bot,boolean
-creator_domain,keyword
-creator_id,keyword
-creator_name,keyword
-creator_org_name,keyword
-creator_user_name,keyword
-creator_uuid,keyword
-grimoire_creation_date,date
-is_jira_issue,long
-issue_type,keyword
-issue_description,keyword
-key,keyword
-labels,keyword
-main_description,keyword
-metadata__enriched_on,date
-metadata__gelk_backend_name,keyword
-metadata__gelk_version,keyword
-metadata__timestamp,date
-metadata__updated_on,date
-number_of_comments,long
-origin,keyword
-priority,keyword
-progress_total,long
-project_1,keyword
-project_id,keyword
-project_key,keyword
-project,keyword
-project_name,keyword
-reporter_bot,boolean
-reporter_domain,keyword
-reporter_id,keyword
-reporter_login,keyword
-reporter_name,keyword
-reporter_org_name,keyword
-reporter_tz,keyword
-reporter_user_name,keyword
-reporter_uuid,keyword
-repository_labels,keyword
-resolution_date,date
-resolution_description,keyword
-resolution_id,keyword
-resolution_name,keyword
-resolution_self,keyword
-status_description,keyword
-status,keyword
-summary,keyword
-tag,keyword
-time_estimation,long
-time_spent_hours,float
-time_spent,long
-time_to_close_days,float
-time_to_last_update_days,float
-updated,date
-url,keyword
-uuid,keyword
-watchers,long
+name,type,aggregatable,description,raw / calculated
+author_type,keyword,true,Author type.,GrimoireLab / SortingHat
+assignee_bot,boolean,true,Assignee bot.,GrimoireLab / SortingHat
+assignee_domain,keyword,true,Assignee domain.,GrimoireLab / SortingHat
+assignee_id,keyword,true,Assignee id.,GrimoireLab / SortingHat
+assignee,keyword,true,Assignee.,GrimoireLab / SortingHat
+assignee_name,keyword,true,Assignee name.,GrimoireLab / SortingHat
+assignee_org_name,keyword,true,Assignee org name.,GrimoireLab / SortingHat
+assignee_tz,keyword,true,Assignee tz.,GrimoireLab / SortingHat
+assignee_user_name,keyword,true,Assignee user name.,GrimoireLab / SortingHat
+assignee_uuid,keyword,true,Assignee uuid.,GrimoireLab / SortingHat
+author_bot,boolean,true,Author bot.,GrimoireLab / SortingHat
+author_domain,keyword,true,Author domain.,GrimoireLab / SortingHat
+author_id,keyword,true,Author id.,GrimoireLab / SortingHat
+author_login,keyword,true,Author login.,GrimoireLab / SortingHat
+author_name,keyword,true,Author name.,GrimoireLab / SortingHat
+author_org_name,keyword,true,Author org name.,GrimoireLab / SortingHat
+author_tz,keyword,true,Author tz.,GrimoireLab / SortingHat
+author_user_name,keyword,true,Author user name.,GrimoireLab / SortingHat
+author_uuid,keyword,true,Author uuid.,GrimoireLab / SortingHat
+changes,long,true,Changes.,Data Source / Parsed
+creation_date,date,true,Creation date.,Data Source / Parsed
+creator_bot,boolean,true,Creator bot.,GrimoireLab / SortingHat
+creator_domain,keyword,true,Creator domain.,GrimoireLab / SortingHat
+creator_id,keyword,true,Creator id.,Data Source / Parsed
+creator_name,keyword,true,Creator name.,Data Source / Parsed
+creator_org_name,keyword,true,Creator org name.,GrimoireLab / SortingHat
+creator_user_name,keyword,true,Creator user name.,Data Source / Parsed
+creator_uuid,keyword,true,Creator uuid.,GrimoireLab / SortingHat
+grimoire_creation_date,date,true,Date when the item was created in GrimoireLab.,GrimoireLab
+is_jira_issue,long,true,Is jira issue.,GrimoireLab
+issue_type,keyword,true,Issue type.,Data Source / Parsed
+issue_description,keyword,true,Issue description.,Data Source / Parsed
+key,keyword,true,Key.,Data Source / Parsed
+labels,keyword,true,Labels.,Data Source / Parsed
+main_description,keyword,true,Main description.,Data Source / Parsed
+metadata__enriched_on,date,true,Date when the item was enriched.,GrimoireLab
+metadata__gelk_backend_name,keyword,true,Name of the backend used to enrich information.,GrimoireLab
+metadata__gelk_version,keyword,true,Version of the backend used to enrich information.,GrimoireLab
+metadata__timestamp,date,true,Date when the item was stored in RAW index.,GrimoireLab
+metadata__updated_on,date,true,Date when the item was updated in its original data source.,GrimoireLab
+number_of_comments,long,true,Number of comments.,Data Source / Parsed
+origin,keyword,true,Repository or source URL.,Data Source / Parsed
+priority,keyword,true,Priority.,Data Source / Parsed
+progress_total,long,true,Progress total.,Data Source / Parsed
+project_1,keyword,true,Project (if more than one level is allowed in project hierarchy).,GrimoireLab / projects.json
+project_id,keyword,true,Project id.,GrimoireLab / projects.json
+project_key,keyword,true,Project key.,GrimoireLab / projects.json
+project,keyword,true,Project assigned to the item.,GrimoireLab / projects.json
+project_name,keyword,true,Project name.,GrimoireLab / projects.json
+reporter_bot,boolean,true,Reporter bot.,GrimoireLab / SortingHat
+reporter_domain,keyword,true,Reporter domain.,GrimoireLab / SortingHat
+reporter_id,keyword,true,Reporter id.,Data Source / Parsed
+reporter_login,keyword,true,Reporter login.,Data Source / Parsed
+reporter_name,keyword,true,Reporter name.,Data Source / Parsed
+reporter_org_name,keyword,true,Reporter org name.,GrimoireLab / SortingHat
+reporter_tz,keyword,true,Reporter tz.,Data Source / Parsed
+reporter_user_name,keyword,true,Reporter user name.,Data Source / Parsed
+reporter_uuid,keyword,true,Reporter uuid.,GrimoireLab / SortingHat
+repository_labels,keyword,true,Labels attached to the repository from projects.json.,GrimoireLab / projects.json
+resolution_date,date,true,Resolution date.,Data Source / Parsed
+resolution_description,keyword,true,Resolution description.,Data Source / Parsed
+resolution_id,keyword,true,Resolution id.,Data Source / Parsed
+resolution_name,keyword,true,Resolution name.,Data Source / Parsed
+resolution_self,keyword,true,Resolution self.,Data Source / Parsed
+status_description,keyword,true,Status description.,Data Source / Parsed
+status,keyword,true,Status.,Data Source / Parsed
+summary,keyword,true,Summary.,Data Source / Parsed
+tag,keyword,true,Tag provided by the data source.,Data Source / Parsed
+time_estimation,long,true,Time estimation.,Data Source / Parsed
+time_spent_hours,float,true,Time spent hours.,Data Source / Parsed
+time_spent,long,true,Time spent.,Data Source / Parsed
+time_to_close_days,float,true,Time to close days.,Data Source / Parsed
+time_to_last_update_days,float,true,Time to last update days.,Data Source / Parsed
+updated,date,true,Updated.,Data Source / Parsed
+url,keyword,true,Url.,Data Source / Parsed
+uuid,keyword,true,Item UUID.,Data Source / Parsed
+watchers,long,true,Watchers.,Data Source / Parsed
